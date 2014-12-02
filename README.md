@@ -1,0 +1,2 @@
+badenova-magazine-proto
+=======================
