@@ -1,0 +1,54 @@
+/**
+ * Colors
+ */
+$kuck-green: #5ACA00;
+$kuck-blue: #7BAABE;
+$kuck-bluer: #4BBFC3;
+$kuck-orange: #FFA600;
+
+$kuck-white: #f2f2f2;
+$kuck-black: #333;
+
+$glf-grey: #E6E6E6;
+$glf-dark: #434343;
+$glf-border: #cdcdcd;
+
+
+/**
+ * Fonts
+ */
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Josefin Slab', serif;
+
+/**
+ * Global settings
+ */
+html, body {
+	width: 100%;
+	height: 100%;
+
+	font-family: $font-primary;
+	font-weight: 300;
+}
+
+.main-container {
+    position: relative;
+    top: 70px;
+	height: 100%;
+	width: 100%;
+    z-index: 2;
+
+    overflow-y: scroll;
+}
+
+footer {
+    position: absolute;
+    top: 300%;
+    margin-top: 50px;
+    background-color: white;
+}
+
+[ng-cloak]
+{
+  display: none !important;
+}

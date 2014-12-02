@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--
+            Fonts
+        -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700' rel='stylesheet' type='text/css'>
+
+        <!--
+            Vendor stylesheets
+        -->
+        <!-- build:css styles/vendor.min.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!--
+            Custom stylesheets
+        -->
+        <!-- build:css({.tmp,app}) styles/main.min.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="app">
+
+        <!--
+            The ui-view directive tells $state where to place the templates
+        -->
+        <div ui-view class="main-container" ng-cloak></div>
+
+
+        <!--
+            Vendor scripts
+        -->
+        <!-- build:js scripts/vendor.min.js -->
+        <!-- bower:js -->
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="../bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!--
+            Custom angular scripts
+        -->
+        <!-- build:js scripts/main.min.js -->
+        <!-- inject:js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/filters/agsBytes.filter.js"></script>
+        <script src="scripts/directives/loader/loader.directive.js"></script>
+        <script src="scripts/routes/landing/landing.controller.js"></script>
+        <script src="scripts/services/auth/auth.service.js"></script>
+        <script src="scripts/directives/progress/progress.directive.js"></script>
+        <!-- endinject -->
+        <!-- endbuild -->
+
+    </body>
+</html>
