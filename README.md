@@ -36,11 +36,11 @@ $ gulp serve
 
 * Navigation-Bar (Simon)
 * Personalization-Bar with LocalStorage (Simon)
-* Landing Page with article overview & infinite load
-* Article Detail View
+* Landing Page with article overview & infinite load (Marvin)
+* Article Detail View (Marvin)
 * Article Map View
-* Article Search View
-* Media View
-* Contact View
+* Article Search View (Marvin)
+* Media View 
+* Contact View (Marvin)
 * Fake PDF-Export
 * Badenova Responsive Logo
