@@ -38,6 +38,7 @@
 
             if(localStorageService.isSupported) {
                 // fetch 
+                console.log('do something');
             }
             else {
                 q.reject('storage-error');
