@@ -1,13 +1,42 @@
+<!-- Navigation -->
 <nav id="nav">
 	<!-- Nav logo -->
 	<div class="nav-logo"></div>
 
 	<!-- Nav items -->
 	<div class="nav-items">
-		<div class="nav-item">
-			<a ui-sref="landing">
-				<i class="ion-ios-search-strong"></i> Suche
-			</a>
+		<div class="nav-vertical-center">
+			<div class="nav-item" ui-sref-active="active">
+				<a ui-sref="landing">
+					<div class="nav-item-icon ion-ios-search"></div>
+					<div class="nav-item-label">Suche</div>
+				</a>
+			</div>
+			<div class="nav-item" ui-sref-active="active">
+				<a ui-sref="landing">
+					<div class="nav-item-icon ion-ios-location-outline"></div>
+					<div class="nav-item-label">Karte</div>
+				</a>
+			</div>
+			<div class="nav-item" ui-sref-active="active">
+				<a ui-sref="landing">
+					<div class="nav-item-icon ion-ios-film-outline"></div>
+					<div class="nav-item-label">Medien</div>
+				</a>
+			</div>
+			<div class="nav-item" ui-sref-active="active">
+				<a ui-sref="landing">
+					<i class="nav-item-icon ion-ios-chatboxes-outline"></i>
+					<div class="nav-item-label">Kontakt</div>
+				</a>
+			</div>
 		</div>
 	</div>
 </nav>
+
+<!-- Nested View -->
+
+
+
+<!-- Feedbar -->
+<div id="feed"></div>

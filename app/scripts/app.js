@@ -36,7 +36,7 @@ angular
     })
 
     .state('landing', {
-      url: '/',
+      url: '/landing',
       templateUrl: 'scripts/routes/landing/landing.index.tpl.html',
       controller: 'LandingCtrl',
       controllerAs: 'ctrl'
