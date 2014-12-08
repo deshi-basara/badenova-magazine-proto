@@ -17,7 +17,8 @@
     "angular-ui-router": "~0.2.13",
     "angular-local-storage": "~0.1.5",
     "ionicons": "~2.0.0",
-    "normalize.css": "~3.0.2"
+    "normalize.css": "~3.0.2",
+    "angular-bootstrap": "~0.12.0"
   },
   "devDependencies": {
     "bourbon": "~4.0.2",

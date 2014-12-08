@@ -11,6 +11,7 @@
 angular
   .module('app', [
   'ui.router',
+  'ui.bootstrap',
   'LocalStorageModule'
 ])
 
@@ -28,15 +29,14 @@ angular
 
     // setup an abstract state for the navigation directive
     .state('nav', {
-      url: '/',
-      //abstract: true,
+      abstract: true,
       templateUrl: 'scripts/routes/nav/nav.index.tpl.html',
       controller: 'NavCtrl',
       controllerAs: 'ctrl'
     })
 
-    .state('landing', {
-      url: '/landing',
+    .state('nav.overview', {
+      url: '/',
       templateUrl: 'scripts/routes/landing/landing.index.tpl.html',
       controller: 'LandingCtrl',
       controllerAs: 'ctrl'
