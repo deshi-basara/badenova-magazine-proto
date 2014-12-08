@@ -17,6 +17,10 @@
     .bad-loader-content {
         display: table-cell;
         vertical-align: middle;
+
+        img {
+            filter: grayscale(1);
+        }
     }
 }
 
