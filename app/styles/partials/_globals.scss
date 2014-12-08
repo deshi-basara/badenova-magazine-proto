@@ -1,17 +1,17 @@
 /**
  * Colors
  */
-$kuck-green: #5ACA00;
-$kuck-blue: #7BAABE;
-$kuck-bluer: #4BBFC3;
-$kuck-orange: #FFA600;
+$bad-green: #5ACA00;
+$bad-blue: #7BAABE;
+$bad-bluer: #4BBFC3;
+$bad-orange: #FFA600;
 
-$kuck-white: #f2f2f2;
-$kuck-black: #333;
+$bad-white: #f2f2f2;
+$bad-black: #333;
 
-$glf-grey: #E6E6E6;
-$glf-dark: #434343;
-$glf-border: #cdcdcd;
+$bad-grey: #E6E6E6;
+$bad-dark: #434343;
+$bad-border: #cdcdcd;
 
 
 /**
@@ -32,13 +32,9 @@ html, body {
 }
 
 .main-container {
-    position: relative;
-    top: 70px;
+    position: absolute;
 	height: 100%;
 	width: 100%;
-    z-index: 2;
-
-    overflow-y: scroll;
 }
 
 footer {
