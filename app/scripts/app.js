@@ -26,6 +26,15 @@ angular
   // Set up the various states which the app can be in.
   $stateProvider
 
+    // setup an abstract state for the navigation directive
+    .state('nav', {
+      url: '/',
+      //abstract: true,
+      templateUrl: 'scripts/routes/nav/nav.index.tpl.html',
+      controller: 'NavCtrl',
+      controllerAs: 'ctrl'
+    })
+
     .state('landing', {
       url: '/',
       templateUrl: 'scripts/routes/landing/landing.index.tpl.html',
