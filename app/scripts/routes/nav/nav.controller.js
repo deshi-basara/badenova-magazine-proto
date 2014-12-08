@@ -39,7 +39,7 @@
 
         //////////////////////
 
-        openFeedModal();
+        //openFeedModal();
     }
 
 })();
