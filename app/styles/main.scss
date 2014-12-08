@@ -8,10 +8,12 @@
 @import "partials/components";
 @import "partials/animation";
 @import "partials/loader";
+@import "partials/modal";
 
 /**
  * View imports
  */
 @import "views/nav";
+@import "views/feed";
 @import "views/footer";
 @import "views/landing";

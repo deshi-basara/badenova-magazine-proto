@@ -6,18 +6,31 @@
         .module('app')
         .controller('NavCtrl', NavCtrl);
 
-    NavCtrl.$inject = [];
+    NavCtrl.$inject = ['$modal', 'NavService'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function NavCtrl() {
+    function NavCtrl($modal, NavService) {
         var ctrl = this;
+
+        /**
+         * Opens the feedbar-modal.
+         */
+        function openFeedModal() {
+            var modalInstance = $modal.open({
+                templateUrl: 'feed-modal.html',
+                controller: 'NavModalCtrl',
+                controllerAs: 'modal',
+                size: 'lg'
+            });
+        }
 
         //////////////////////
 
         angular.extend(ctrl, {
 
+            openFeedModal: openFeedModal
         });
 
         ///////////////////////
@@ -26,7 +39,7 @@
 
         //////////////////////
 
-        //=> All controller autostart functions
+        openFeedModal();
     }
 
 })();

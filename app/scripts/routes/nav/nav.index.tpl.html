@@ -39,4 +39,42 @@
 
 
 <!-- Feedbar -->
-<div id="feed"></div>
+<div id="feed">
+
+	<!-- Selected Feeds -->
+	<div class="feed-items">
+		<div class="feed-item">
+			<div class="ion-clock"></div>
+		</div>
+		<div class="feed-item">
+			<div class="ion-clock"></div>
+		</div>
+	</div>
+
+	<!-- Add Feeds -->
+	<div class="feed-add">
+		<i class="ion-ios-plus" ng-click="ctrl.openFeedModal()"></i>
+	</div>
+
+</div>
+
+<img src="">
+
+<!-- Feedbar Modal -->
+<script type="text/ng-template" id="feed-modal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Welche Kategorien interessieren dich?</h3>
+    </div>
+    <div id="feed-body" class="modal-body">
+    	<div class="modal-feed-item" ng-repeat="item in modal.feedItems">
+    		<div class="modal-feed-content">
+    			<div><span><img ng-src="images/feed/{{ item.img }}" /></span></div>
+    		</div>
+    		<div class="modal-feed-label"><span>{{ item.name }}</span><i class="ion-ios-checkmark"></i></div>
+    	</div>
+    </div>
+    <!--<div class="modal-footer">
+        <button class="button button-orange" ng-click="ok()">OK</button>
+        <button class="button" ng-click="cancel()">Cancel</button>
+    </div>-->
+</script>
