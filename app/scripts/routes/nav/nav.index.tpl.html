@@ -34,7 +34,7 @@
 	</div>
 </nav>
 
-<!-- Nested View -
+<!-- Nested View --
 <div class="bad-loader" ng-class="{ 'hide': ctrl.preloaderHide }">
 	<div class="bad-loader-content">
 		<img src="images/loader/bad-loader.gif">
@@ -44,7 +44,7 @@
 <!-- Nested view content -->
 <section ui-view class="nested-container"></section>
 
-
+<!-- Search-Box -->
 
 <!-- Feedbar -->
 <div id="feed">
@@ -68,23 +68,17 @@
 
 </div>
 
-<img src="">
-
-<!-- Feedbar Modal -->
-<script type="text/ng-template" id="feed-modal.html">
-    <div class="modal-header">
-        <h3 class="modal-title">Welche Kategorien interessieren dich?</h3>
+<!-- Feedbar Box -->
+<div id="feed-box">
+	<div class="feed-box-content">
+		<div class="feed-box-items">
+			<h3 class="headline">Welche Kategorien interessieren dich?</h3>
+	    	<div class="feed-box-item" ng-repeat="item in ctrl.feedItems">
+	    		<div class="feed-box-content">
+	    			<div><span><img ng-src="images/feed/{{ item.img }}" /></span></div>
+	    		</div>
+	    		<div class="feed-box-label"><span>{{ item.name }}</span><i class="ion-ios-checkmark"></i></div>
+	    	</div>
+		</div>
     </div>
-    <div id="feed-body" class="modal-body">
-    	<div class="modal-feed-item" ng-repeat="item in modal.feedItems">
-    		<div class="modal-feed-content">
-    			<div><span><img ng-src="images/feed/{{ item.img }}" /></span></div>
-    		</div>
-    		<div class="modal-feed-label"><span>{{ item.name }}</span><i class="ion-ios-checkmark"></i></div>
-    	</div>
-    </div>
-    <!--<div class="modal-footer">
-        <button class="button button-orange" ng-click="ok()">OK</button>
-        <button class="button" ng-click="cancel()">Cancel</button>
-    </div>-->
-</script>
+</div>

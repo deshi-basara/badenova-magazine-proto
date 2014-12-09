@@ -1,8 +1,9 @@
 #nav {
     position: relative;
     width: 200px;
+    flex: 0 0 200px;
     height: 100%;
-    float: left;
+
 
     background-color: $bad-white;
     overflow: hidden;
@@ -10,9 +11,10 @@
 
     z-index: 3;
 
-    @include transition(width 0.7s ease-in-out);
-    &.docked {
+    @include transition(all 0.7s ease-in-out);
+    &:hover {
         width: 80px;
+        flex: 0 0 80px;
     }
 
     .nav-items {

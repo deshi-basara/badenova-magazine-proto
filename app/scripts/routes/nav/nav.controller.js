@@ -29,6 +29,7 @@
         //////////////////////
 
         angular.extend(ctrl, {
+            feedItems: NavService.getFeedItems(),
 
             openFeedModal: openFeedModal
         });
