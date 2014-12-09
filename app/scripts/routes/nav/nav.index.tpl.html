@@ -6,29 +6,29 @@
 	<!-- Nav items -->
 	<div class="nav-items">
 		<div class="nav-vertical-center">
-			<div class="nav-item" ui-sref-active="active">
-				<a ui-sref="landing">
+			<div class="nav-item" ng-class="{ 'active': ctrl.open.search }" ng-click="ctrl.toggleBox('search')">
+				<div>
 					<div class="nav-item-icon ion-ios-search"></div>
 					<div class="nav-item-label">Suche</div>
-				</a>
+				</div>
 			</div>
-			<div class="nav-item" ui-sref-active="active">
-				<a ui-sref="landing">
+			<div class="nav-item" ng-class="{ 'active': ctrl.open.map }" ng-click="ctrl.toggleBox('map')">
+				<div>
 					<div class="nav-item-icon ion-ios-location-outline"></div>
 					<div class="nav-item-label">Karte</div>
-				</a>
+				</div>
 			</div>
-			<div class="nav-item" ui-sref-active="active">
-				<a ui-sref="landing">
+			<div class="nav-item" ng-class="{ 'active': ctrl.open.media }" ng-click="ctrl.toggleBox('media')">
+				<div>
 					<div class="nav-item-icon ion-ios-film-outline"></div>
 					<div class="nav-item-label">Medien</div>
-				</a>
+				</div>
 			</div>
-			<div class="nav-item" ui-sref-active="active">
-				<a ui-sref="landing">
+			<div class="nav-item" ng-class="{ 'active': ctrl.open.contact }" ng-click="ctrl.toggleBox('contact')">
+				<div>
 					<i class="nav-item-icon ion-ios-chatboxes-outline"></i>
 					<div class="nav-item-label">Kontakt</div>
-				</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -45,7 +45,7 @@
 <section ui-view class="nested-container"></section>
 
 <!-- Search-Box -->
-<div id="search-box">
+<div id="search-box" ng-class="{ 'open': ctrl.open.search }">
 
 	<div class="search-box-content">
 
@@ -67,7 +67,7 @@
 
 	<!-- Add Feeds -->
 	<div class="feed-add">
-		<i class="ion-ios-plus" ng-click="ctrl.toggleFeed()" ng-class="{ 'open': ctrl.open.feed }"></i>
+		<i class="ion-ios-plus" ng-click="ctrl.toggleFeed()" ng-class="{ 'open': ctrl.openBoxName }"></i>
 	</div>
 
 	<!-- Selected Feeds -->
