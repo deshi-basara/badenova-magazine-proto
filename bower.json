@@ -15,7 +15,8 @@
   ],
   "dependencies": {
     "angular-ui-router": "~0.2.13",
-    "angular-local-storage": "~0.1.5"
+    "angular-local-storage": "~0.1.5",
+    "ngInfiniteScroll": "~1.2.0"
   },
   "devDependencies": {
     "bourbon": "~4.0.2",

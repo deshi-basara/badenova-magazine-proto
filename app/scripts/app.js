@@ -11,7 +11,8 @@
 angular
   .module('app', [
   'ui.router',
-  'LocalStorageModule'
+  'LocalStorageModule',
+  'infinite-scroll'
 ])
 
 .constant('config', {
