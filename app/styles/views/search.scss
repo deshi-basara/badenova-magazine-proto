@@ -1,0 +1,56 @@
+#search-box {
+    position: fixed;
+    @include size(100% 100%);
+    left: 0;
+    display: table;
+
+    background-color: $bad-light-white;
+    text-align: center;
+    z-index: 2;
+
+    //@include transform(translate3d(110%, 0, 0));
+    @include transition(transform 1s ease-in-out);
+    &.open {
+        @include transform(translate3d(0, 0, 0));
+    }
+
+    .search-box-content {
+        display: table-cell;
+        vertical-align: middle;
+
+        padding-right: 100px;
+        padding-left: 200px;
+
+        .search-input {
+            width: 60%;
+            margin-left: 20%;
+
+            input {
+                display: block;
+                width: 100%;
+                border: 0;
+                font-size: em(20);
+                padding:.75rem 1rem;
+                border-radius: 2px;
+                box-shadow: $frame-1;
+
+                @include transform(translate3d(0,0,0));
+                @include transition(all 0.5s ease-in-out);
+
+                &:focus {
+                    @include transform(translate3d(0,-300px,0));
+
+                    outline: 0;
+                }
+            }
+        }
+
+        .search-results {
+            width: 60%;
+            max-height: 500px;
+            margin-left: 20%;
+
+            background-color: red;
+        }
+    }
+}
