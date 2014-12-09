@@ -49,21 +49,17 @@
 <!-- Feedbar -->
 <div id="feed">
 
-	<!-- Selected Feeds -->
-	<div class="feed-items">
-		<div class="feed-item">
-			<i class="ion-ios-close"></i>
-			<img src="images/feed/freetime.png">
-		</div>
-		<div class="feed-item">
-			<i class="ion-ios-close"></i>
-			<img src="images/feed/family.png">
-		</div>
-	</div>
-
 	<!-- Add Feeds -->
 	<div class="feed-add">
-		<i class="ion-ios-plus" ng-click="ctrl.openFeed()"></i>
+		<i class="ion-ios-plus" ng-click="ctrl.toggleFeed()" ng-class="{ 'open': ctrl.open.feed }"></i>
+	</div>
+
+	<!-- Selected Feeds -->
+	<div class="feed-items">
+		<div ng-repeat="item in ctrl.feedItems" class="feed-item list" ng-class="item.color">
+			<i class="ion-ios-close"></i>
+			<img src="images/feed/{{ item.img }}">
+		</div>
 	</div>
 
 </div>
@@ -73,10 +69,10 @@
 	<div class="feed-box-content">
 		<div class="feed-box-items">
 			<h3 class="headline">Welche Kategorien interessieren dich?</h3>
-	    	<div class="feed-box-item" ng-repeat="item in ctrl.feedItems">
+	    	<div ng-repeat="item in ctrl.feedItems" class="feed-box-item {{ item.color }}" ng-class="{ 'active': item.active }">
 	    		<div class="feed-box-content"></div>
 	    		<img ng-src="images/feed/{{ item.img }}" />
-	    		<div class="feed-box-label"><span>{{ item.name }}</span><i class="ion-ios-checkmark"></i></div>
+	    		<div class="feed-box-label"><span>{{ item.name }}</span><i class="ng-hide ion-ios-checkmark"></i></div>
 	    	</div>
 		</div>
     </div>

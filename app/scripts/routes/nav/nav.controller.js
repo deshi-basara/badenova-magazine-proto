@@ -17,8 +17,8 @@
         /**
          * Opens the feedbar-modal.
          */
-        function openFeed() {
-            ctrl.open.feed = true;
+        function toggleFeed() {
+            ctrl.open.feed = (ctrl.open.feed === false) ? true : false;
         }
 
         //////////////////////
@@ -29,7 +29,7 @@
                 feed: false
             },
 
-            openFeed: openFeed
+            toggleFeed: toggleFeed
         });
 
         ///////////////////////

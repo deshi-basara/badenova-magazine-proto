@@ -49,7 +49,10 @@ angular
 
 })
 
-.run(function(AuthService) {
+.run(function(AuthService, FeedService) {
 
+  // initiate feed, if not happended previously
+  FeedService.initFeed(function(err) {
 
+  });
 });
