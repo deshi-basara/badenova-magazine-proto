@@ -11,6 +11,7 @@
 angular
   .module('app', [
   'ui.router',
+  'ngAnimate',
   'LocalStorageModule',
   'infinite-scroll',
   'ui.bootstrap',

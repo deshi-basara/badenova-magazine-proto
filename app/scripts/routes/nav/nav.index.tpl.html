@@ -56,7 +56,7 @@
 
 	<!-- Selected Feeds -->
 	<div class="feed-items">
-		<div ng-repeat="item in ctrl.feedItems" class="feed-item list" ng-class="item.color">
+		<div ng-repeat="item in ctrl.feedItems | filter: {active: true} " class="feed-item list" ng-class="item.color">
 			<i class="ion-ios-close"></i>
 			<img src="images/feed/{{ item.img }}">
 		</div>
