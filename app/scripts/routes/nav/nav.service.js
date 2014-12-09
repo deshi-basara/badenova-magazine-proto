@@ -30,14 +30,14 @@
          */
         function getFeedItems(fileObj) {
             var feedItems = [
-                {img: 'culture.png', name: 'Kultur', color: 'feed-light-blue', active: true },
-                {img: 'family.png', name: 'Familie', color: 'feed-light-orange', active: true},
-                {img: 'freetime.png', name: 'Freizeit', color: 'feed-light-green', active: true},
-                {img: 'greenenergy.png', name: 'Ökostrom', color: 'feed-light-blue', active: true},
-                {img: 'naturalgas.png', name: 'Erdgas', color: 'feed-light-orange', active: true},
-                {img: 'nature.png', name: 'Natur', color: 'feed-light-green', active: true},
-                {img: 'news.png', name: 'Aktuelles', color: 'feed-light-blue', active: true},
-                {img: 'saveenergy.png', name: 'Energie sparen', color: 'feed-light-orange', active: true}
+                {id: 0, img: 'culture.png', name: 'Kultur', color: 'feed-light-blue', active: true },
+                {id: 1, img: 'family.png', name: 'Familie', color: 'feed-light-orange', active: true},
+                {id: 2, img: 'freetime.png', name: 'Freizeit', color: 'feed-light-green', active: true},
+                {id: 3, img: 'greenenergy.png', name: 'Ökostrom', color: 'feed-light-blue', active: true},
+                {id: 4, img: 'naturalgas.png', name: 'Erdgas', color: 'feed-light-orange', active: true},
+                {id: 5, img: 'nature.png', name: 'Natur', color: 'feed-light-green', active: true},
+                {id: 6, img: 'news.png', name: 'Aktuelles', color: 'feed-light-blue', active: true},
+                {id: 7, img: 'saveenergy.png', name: 'Energie sparen', color: 'feed-light-orange', active: true}
             ];
 
             return feedItems;

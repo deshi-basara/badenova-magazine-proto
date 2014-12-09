@@ -71,9 +71,9 @@
 	</div>
 
 	<!-- Selected Feeds -->
-	<div class="feed-items">
+	<div class="feed-items" ng-animate-children>
 		<div ng-repeat="item in ctrl.feedItems | filter: {active: true} " class="feed-item list" ng-class="item.color">
-			<i class="ion-ios-close"></i>
+			<i class="ion-ios-close" ng-click="ctrl.toggleFeedCategory(item.id)"></i>
 			<img src="images/feed/{{ item.img }}">
 		</div>
 	</div>
@@ -85,7 +85,7 @@
 	<div class="feed-box-content">
 		<div class="feed-box-items">
 			<h3 class="headline">Welche Kategorien interessieren dich?</h3>
-	    	<div ng-repeat="item in ctrl.feedItems" class="feed-box-item {{ item.color }}" ng-class="{ 'active': item.active }">
+	    	<div ng-repeat="item in ctrl.feedItems" class="feed-box-item {{ item.color }}" ng-class="{ 'active': item.active }" ng-click="ctrl.toggleFeedCategory(item.id)">
 	    		<div class="feed-box-content"></div>
 	    		<img ng-src="images/feed/{{ item.img }}" />
 	    		<div class="feed-box-label"><span>{{ item.name }}</span><i class="ng-hide ion-ios-checkmark"></i></div>

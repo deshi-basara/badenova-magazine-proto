@@ -28,7 +28,6 @@
          * Toggles the right feedbar-box.
          */
         function toggleFeed() {
-            console.log(ctrl.openBoxName);
             // check if there is already a box open
             if(ctrl.openBoxName) {
                 // close open box & reset button
@@ -42,6 +41,17 @@
             }
         }
 
+        /**
+         * Toggles the feed-category on or off.
+         * @param  {int}    categoryId [Array-index of the category we want to toggle]
+         */
+        function toggleFeedCategory(categoryId) {
+            var categoryObject = ctrl.feedItems[categoryId];
+
+            // toggle it
+            ctrl.feedItems[categoryId].active = (categoryObject.active === false) ? true : false;
+        }
+
         //////////////////////
 
         angular.extend(ctrl, {
@@ -53,7 +63,8 @@
             openBoxName: null,
 
             toggleBox: toggleBox,
-            toggleFeed: toggleFeed
+            toggleFeed: toggleFeed,
+            toggleFeedCategory: toggleFeedCategory
         });
 
         ///////////////////////
@@ -63,6 +74,7 @@
         //////////////////////
 
         //openFeedModal();
+
     }
 
 })();
