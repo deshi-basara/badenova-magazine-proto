@@ -17,21 +17,19 @@
         /**
          * Opens the feedbar-modal.
          */
-        function openFeedModal() {
-            var modalInstance = $modal.open({
-                templateUrl: 'feed-modal.html',
-                controller: 'NavModalCtrl',
-                controllerAs: 'modal',
-                size: 'lg'
-            });
+        function openFeed() {
+            ctrl.open.feed = true;
         }
 
         //////////////////////
 
         angular.extend(ctrl, {
             feedItems: NavService.getFeedItems(),
+            open: {
+                feed: false
+            },
 
-            openFeedModal: openFeedModal
+            openFeed: openFeed
         });
 
         ///////////////////////

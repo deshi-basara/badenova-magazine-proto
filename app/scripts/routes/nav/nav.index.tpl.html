@@ -63,20 +63,19 @@
 
 	<!-- Add Feeds -->
 	<div class="feed-add">
-		<i class="ion-ios-plus" ng-click="ctrl.openFeedModal()"></i>
+		<i class="ion-ios-plus" ng-click="ctrl.openFeed()"></i>
 	</div>
 
 </div>
 
 <!-- Feedbar Box -->
-<div id="feed-box">
+<div id="feed-box" ng-class="{ 'open': ctrl.open.feed }">
 	<div class="feed-box-content">
 		<div class="feed-box-items">
 			<h3 class="headline">Welche Kategorien interessieren dich?</h3>
 	    	<div class="feed-box-item" ng-repeat="item in ctrl.feedItems">
-	    		<div class="feed-box-content">
-	    			<div><span><img ng-src="images/feed/{{ item.img }}" /></span></div>
-	    		</div>
+	    		<div class="feed-box-content"></div>
+	    		<img ng-src="images/feed/{{ item.img }}" />
 	    		<div class="feed-box-label"><span>{{ item.name }}</span><i class="ion-ios-checkmark"></i></div>
 	    	</div>
 		</div>
