@@ -1,3 +1,69 @@
-#navigation {
+#nav {
+    position: relative;
+    width: 200px;
+    height: 100%;
+    float: left;
 
+    background-color: $bad-white;
+    overflow: hidden;
+    box-shadow: $frame-1;
+
+    z-index: 3;
+
+    @include transition(width 0.7s ease-in-out);
+    &.docked {
+        width: 80px;
+    }
+
+    .nav-items {
+        position: relative;
+        display: table;
+        @include size(100% 100%);
+
+        .nav-vertical-center {
+            display: table-cell;
+            vertical-align: middle;
+
+            .nav-item {
+                height: em(55);
+                width: 200px;
+
+                a {
+                    display: block;
+                    @include size(100% 100%);
+                    text-decoration: none;
+                    line-height: 55px;
+                    color: $bad-black;
+
+                    @include transition(color 0.7s ease-in-out);
+
+                    .nav-item-icon {
+                        font-size: em(35);
+                        text-align: center;
+
+                        @include span-columns(5 of 12);
+                    }
+
+                    .nav-item-label {
+                        top: -5px;
+                        font-size: em(18);
+
+                        @include span-columns(7 of 12);
+                    }
+                }
+
+                &.active {
+                    a {
+                        color: $bad-orange;
+                    }
+                }
+
+                &:hover {
+                    a {
+                        color: $bad-orange;
+                    }
+                }
+            }
+        }
+    }
 }

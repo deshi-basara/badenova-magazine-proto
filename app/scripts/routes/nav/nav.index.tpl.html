@@ -1,0 +1,87 @@
+<!-- Navigation -->
+<nav id="nav">
+	<!-- Nav logo -->
+	<div class="nav-logo"></div>
+
+	<!-- Nav items -->
+	<div class="nav-items">
+		<div class="nav-vertical-center">
+			<div class="nav-item" ui-sref-active="active">
+				<a ui-sref="landing">
+					<div class="nav-item-icon ion-ios-search"></div>
+					<div class="nav-item-label">Suche</div>
+				</a>
+			</div>
+			<div class="nav-item" ui-sref-active="active">
+				<a ui-sref="landing">
+					<div class="nav-item-icon ion-ios-location-outline"></div>
+					<div class="nav-item-label">Karte</div>
+				</a>
+			</div>
+			<div class="nav-item" ui-sref-active="active">
+				<a ui-sref="landing">
+					<div class="nav-item-icon ion-ios-film-outline"></div>
+					<div class="nav-item-label">Medien</div>
+				</a>
+			</div>
+			<div class="nav-item" ui-sref-active="active">
+				<a ui-sref="landing">
+					<i class="nav-item-icon ion-ios-chatboxes-outline"></i>
+					<div class="nav-item-label">Kontakt</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- Nested View -->
+<div class="bad-loader">
+	<div class="bad-loader-content">
+		<img src="images/loader/bad-loader.gif">
+	</div>
+</div>
+
+
+
+<!-- Feedbar -->
+<div id="feed">
+
+	<!-- Selected Feeds -->
+	<div class="feed-items">
+		<div class="feed-item">
+			<i class="ion-ios-close"></i>
+			<img src="images/feed/freetime.png">
+		</div>
+		<div class="feed-item">
+			<i class="ion-ios-close"></i>
+			<img src="images/feed/family.png">
+		</div>
+	</div>
+
+	<!-- Add Feeds -->
+	<div class="feed-add">
+		<i class="ion-ios-plus" ng-click="ctrl.openFeedModal()"></i>
+	</div>
+
+</div>
+
+<img src="">
+
+<!-- Feedbar Modal -->
+<script type="text/ng-template" id="feed-modal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Welche Kategorien interessieren dich?</h3>
+    </div>
+    <div id="feed-body" class="modal-body">
+    	<div class="modal-feed-item" ng-repeat="item in modal.feedItems">
+    		<div class="modal-feed-content">
+    			<div><span><img ng-src="images/feed/{{ item.img }}" /></span></div>
+    		</div>
+    		<div class="modal-feed-label"><span>{{ item.name }}</span><i class="ion-ios-checkmark"></i></div>
+    	</div>
+    </div>
+    <!--<div class="modal-footer">
+        <button class="button button-orange" ng-click="ok()">OK</button>
+        <button class="button" ng-click="cancel()">Cancel</button>
+    </div>-->
+</script>

@@ -1,18 +1,29 @@
-.ags-loader {
-	@include position(fixed, 0 0 0 0);
-    background-color: #FFFFFF;
+.bad-loader {
+    position: relative;
+	float: left;
+    background-color: $bad-white;
     z-index: 200;
-    opacity: 0;
+    opacity: 1;
+    width: 84%;
+    height: 100%;
+    display: table;
+
+    text-align: center;
+
+    z-index: 2;
 
     @include transition(opacity 0.3s ease-in-out);
 
-    img {
-        position: absolute;
-        top: 44%;
-        left: 46%;
+    .bad-loader-content {
+        display: table-cell;
+        vertical-align: middle;
+
+        img {
+            filter: grayscale(1);
+        }
     }
 }
 
-.ags-loader.loading {
-    opacity: 1;
+.bad-loader.hide {
+    opacity: 0;
 }

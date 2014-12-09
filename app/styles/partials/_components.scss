@@ -9,8 +9,8 @@
     box-shadow: none;
     border-radius: 0;
     background: 0 0;
-    border-bottom: 2px solid $glf-white;
-    color: $glf-white;
+    border-bottom: 2px solid $bad-white;
+    color: $bad-white;
     outline: none;
     font-size: em(20);
     font-weight: normal;
@@ -32,7 +32,7 @@ label {
     margin: 10px 1px;
     cursor: pointer;
     text-decoration: none;
-    color: $kuck-white;
+    color: $bad-white;
     outline: 0!important;
     box-shadow: 0;
 }
@@ -44,13 +44,18 @@ label {
 }
 
 .button-blue {
-    background-color: $kuck-blue;
-    color: $kuck-white;
+    background-color: $bad-blue;
+    color: $bad-white;
 }
 
 .button-orange {
-    background-color: $kuck-orange;
-    color: $kuck-white;
+    background-color: $bad-orange;
+    color: $bad-white;
+}
+
+.button-green {
+    background-color: $bad-green;
+    color: $bad-white;
 }
 
 /**
@@ -74,14 +79,14 @@ label {
  * Section boxes
  */
 .section-box {
-    background-color: $kuck-white;
+    background-color: $bad-white;
     box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
     padding: 15px;
 
     .section-box-head {
         height: em(40);
         line-height: em(40);
-        border-bottom: 1px solid $glf-grey;
+        border-bottom: 1px solid $bad-grey;
     }
 }
 
@@ -93,7 +98,7 @@ label {
         height: 36px;
         margin-bottom: 10px;
         padding-left: 7px;
-        border: 2px solid $glf-grey;
+        border: 2px solid $bad-grey;
         border-radius: 0;
         outline: 0;
 
@@ -103,7 +108,7 @@ label {
     textarea {
         margin-bottom: 10px;
         padding-left: 7px;
-        border: 2px solid $glf-grey;
+        border: 2px solid $bad-grey;
         border-radius: 0;
         outline: 0;
 
@@ -111,7 +116,7 @@ label {
     }
 
     .ng-pristine.ng-invalid {
-        border: 2px solid $kuck-orange;
+        border: 2px solid $bad-orange;
     }
 }
 
@@ -141,7 +146,7 @@ label {
         top: 0;
         left: 0;
 
-        background-color: $kuck-white;
+        background-color: $bad-white;
         opacity: 0.7;
 
         @include size(100% 200%);
@@ -156,7 +161,7 @@ label {
         display: inline-block;
         margin-left: -200px;
 
-        background-color: $kuck-white;
+        background-color: $bad-white;
         box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
 
         z-index: 1032;
@@ -165,7 +170,7 @@ label {
             width: 100%;
             height: 50px;
 
-            border-bottom: 4px solid $kuck-blue;
+            border-bottom: 4px solid $bad-blue;
 
             .custom-modal-header-item {
                 @include span-columns(6 of 12, $display: block-collapse);
@@ -174,8 +179,8 @@ label {
                 cursor: pointer;
 
                 &.active {
-                    background-color: $kuck-blue;
-                    color: $kuck-white;
+                    background-color: $bad-blue;
+                    color: $bad-white;
                 }
 
                 &:hover {

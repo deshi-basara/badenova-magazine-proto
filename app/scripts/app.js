@@ -11,8 +11,13 @@
 angular
   .module('app', [
   'ui.router',
+<<<<<<< HEAD
   'LocalStorageModule',
   'infinite-scroll'
+=======
+  'ui.bootstrap',
+  'LocalStorageModule'
+>>>>>>> 3180b1ecfa30b7ddcfcfeef966a6182b38568b4a
 ])
 
 .constant('config', {
@@ -27,7 +32,15 @@ angular
   // Set up the various states which the app can be in.
   $stateProvider
 
-    .state('landing', {
+    // setup an abstract state for the navigation directive
+    .state('nav', {
+      abstract: true,
+      templateUrl: 'scripts/routes/nav/nav.index.tpl.html',
+      controller: 'NavCtrl',
+      controllerAs: 'ctrl'
+    })
+
+    .state('nav.overview', {
       url: '/',
       templateUrl: 'scripts/routes/landing/landing.index.tpl.html',
       controller: 'LandingCtrl',
