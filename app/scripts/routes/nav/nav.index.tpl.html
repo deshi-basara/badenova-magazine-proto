@@ -6,29 +6,29 @@
 	<!-- Nav items -->
 	<div class="nav-items">
 		<div class="nav-vertical-center">
-			<div class="nav-item" ui-sref-active="active">
-				<a ui-sref="landing">
+			<div class="nav-item" ng-class="{ 'active': ctrl.open.search }" ng-click="ctrl.toggleBox('search')">
+				<div>
 					<div class="nav-item-icon ion-ios-search"></div>
 					<div class="nav-item-label">Suche</div>
-				</a>
+				</div>
 			</div>
-			<div class="nav-item" ui-sref-active="active">
-				<a ui-sref="landing">
+			<div class="nav-item" ng-class="{ 'active': ctrl.open.map }" ng-click="ctrl.toggleBox('map')">
+				<div>
 					<div class="nav-item-icon ion-ios-location-outline"></div>
 					<div class="nav-item-label">Karte</div>
-				</a>
+				</div>
 			</div>
-			<div class="nav-item" ui-sref-active="active">
-				<a ui-sref="landing">
+			<div class="nav-item" ng-class="{ 'active': ctrl.open.media }" ng-click="ctrl.toggleBox('media')">
+				<div>
 					<div class="nav-item-icon ion-ios-film-outline"></div>
 					<div class="nav-item-label">Medien</div>
-				</a>
+				</div>
 			</div>
-			<div class="nav-item" ui-sref-active="active">
-				<a ui-sref="landing">
+			<div class="nav-item" ng-class="{ 'active': ctrl.open.contact }" ng-click="ctrl.toggleBox('contact')">
+				<div>
 					<i class="nav-item-icon ion-ios-chatboxes-outline"></i>
 					<div class="nav-item-label">Kontakt</div>
-				</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -44,40 +44,93 @@
 <!-- Nested view content -->
 <section ui-view class="nested-container"></section>
 
+
 <!-- Search-Box -->
+<div id="search-box" ng-class="{ 'open': ctrl.open.search }">
 
-<!-- Feedbar -->
-<div id="feed">
-
-	<!-- Selected Feeds -->
-	<div class="feed-items">
-		<div class="feed-item">
-			<i class="ion-ios-close"></i>
-			<img src="images/feed/freetime.png">
-		</div>
-		<div class="feed-item">
-			<i class="ion-ios-close"></i>
-			<img src="images/feed/family.png">
-		</div>
+	<!-- Search-Input -->
+	<div class="search-input">
+		<input type="text" ng-model="ctrl.searchString" placeholder="Suchen ...">
 	</div>
 
-	<!-- Add Feeds -->
-	<div class="feed-add">
-		<i class="ion-ios-plus" ng-click="ctrl.openFeedModal()"></i>
+	<div class="search-box-content">
+
+		<!-- Search-Results -->
+		<div class="search-results">
+			<div class="search-item">dwadwa</div>
+		</div>
+
+	</div>
+</div>
+
+
+<!-- Map-Box -->
+<div id="map-box" ng-class="{ 'open': ctrl.open.map }">
+
+	<div class="map-box-content">
+
+		<!-- GoogleMaps -->
+		<ui-gmap-google-map class="map-canvas" center='ctrl.map.center' zoom='ctrl.map.zoom' options="ctrl.map.options">
+
+			<!-- Markers -->
+			<ui-gmap-markers models="ctrl.mapMarkers" coords="'coords'" click="">
+
+				<!-- Marker Windows -->
+				<ui-gmap-windows>
+	                <div>
+	                    I should not be attached to a
+	                    marker.
+	                    <p ng-non-bindable >This is an info window at {{ latitude | number:4 }}, {{ longitude | number:4 }}!</p>
+
+	                    <p class="muted">My marker will stay open when the window is popped up!</p>
+	                </div>
+            	</ui-gmap-windows>
+
+			</ui-gmap-markers>
+
+		</ui-gmap-google-map>
+
+		<!-- Nearby list -->
+		<div class="map-nearby">
+			Nearby
+		</div>
+
 	</div>
 
 </div>
 
+
+<!-- Feedbar -->
+<div id="feed">
+
+	<!-- Add Feed -->
+	<div class="feed-add">
+		<i class="ion-ios-plus" ng-click="ctrl.toggleFeed()" ng-class="{ 'open': ctrl.openBoxName }"></i>
+	</div>
+
+	<!-- Selected Feeds -->
+	<div class="feed-items" ng-animate-children>
+		<div ng-repeat="item in ctrl.feedItems | filter: {active: true} " class="feed-item list" ng-class="item.color">
+			<i class="ion-ios-close" ng-click="ctrl.toggleFeedCategory(item.id)"></i>
+			<img src="images/feed/{{ item.img }}">
+		</div>
+	</div>
+
+	<!-- Export Feed -->
+	<div class="feed-export">
+		<i class="ion-ios-download-outline" ng-click="ctrl.exportPdf()" ng-class="{ 'loading': ctrl.exportLoading }"></i>
+	</div>
+
+</div>
 <!-- Feedbar Box -->
-<div id="feed-box">
+<div id="feed-box" ng-class="{ 'open': ctrl.open.feed }">
 	<div class="feed-box-content">
 		<div class="feed-box-items">
 			<h3 class="headline">Welche Kategorien interessieren dich?</h3>
-	    	<div class="feed-box-item" ng-repeat="item in ctrl.feedItems">
-	    		<div class="feed-box-content">
-	    			<div><span><img ng-src="images/feed/{{ item.img }}" /></span></div>
-	    		</div>
-	    		<div class="feed-box-label"><span>{{ item.name }}</span><i class="ion-ios-checkmark"></i></div>
+	    	<div ng-repeat="item in ctrl.feedItems" class="feed-box-item {{ item.color }}" ng-class="{ 'active': item.active }" ng-click="ctrl.toggleFeedCategory(item.id)">
+	    		<div class="feed-box-content"></div>
+	    		<img ng-src="images/feed/{{ item.img }}" />
+	    		<div class="feed-box-label"><span>{{ item.name }}</span><i class="ng-hide ion-ios-checkmark"></i></div>
 	    	</div>
 		</div>
     </div>

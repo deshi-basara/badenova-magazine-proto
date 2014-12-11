@@ -11,10 +11,12 @@
 angular
   .module('app', [
   'ui.router',
+  'ngAnimate',
   'LocalStorageModule',
   'infinite-scroll',
   'ui.bootstrap',
-  'LocalStorageModule'
+  'LocalStorageModule',
+  'uiGmapgoogle-maps'
 ])
 
 .constant('config', {
@@ -22,11 +24,13 @@ angular
   'apiUrl': 'http://localhost:1337'
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, uiGmapGoogleMapApiProvider) {
 
-  // This starter uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
+  /**
+   * This app uses AngularUI Router which uses the concept of states
+   * Learn more here: https://github.com/angular-ui/ui-router
+   * Set up the various states which the app can be in.
+   */
   $stateProvider
 
     // setup an abstract state for the navigation directive
@@ -47,9 +51,21 @@ angular
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
 
+
+  /**
+   * Load the googlemaps sdk async on runtime
+   */
+  uiGmapGoogleMapApiProvider.configure({
+      //    key: 'your api key',
+      libraries: 'weather,geometry,visualization'
+  });
+
 })
 
-.run(function(AuthService) {
+.run(function(AuthService, FeedService) {
 
+  // initiate feed, if not happended previously
+  FeedService.initFeed(function(err) {
 
+  });
 });
