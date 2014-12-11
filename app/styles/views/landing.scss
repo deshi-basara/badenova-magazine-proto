@@ -51,7 +51,7 @@ $list: 0;
 
 	.top-article{
 		
-		height: 70%;
+		height: 80%;
 		@include outer-container;
 		background: #eee;
 		max-width: 100%;
@@ -63,8 +63,8 @@ $list: 0;
 
 		& > img {
 	
-			height: 100%;
   			width:  100%;
+  			height: auto;
 
   			display: block;
     		position: relative  			
@@ -255,8 +255,10 @@ $list: 0;
 
 		@include span-columns(4);
 		background: #eee;
-		height: 30%;
+		height: 40%;
 		margin-top: 1%;
+		overflow: hidden;
+		position: relative;
 		 -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
   		-moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
   		box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -267,9 +269,18 @@ $list: 0;
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
 
-  		background-size: 100% 100% !important;
+  		background-color: $bad-black;
 
 
+			& > img {
+	
+  			width:  150%;
+  			height: auto;
+
+  			display: block;
+    		position: absolute;			
+
+		}
 
 
 			.more-articles_infos {

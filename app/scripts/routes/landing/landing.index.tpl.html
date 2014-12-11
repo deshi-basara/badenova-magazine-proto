@@ -17,7 +17,9 @@
 
 <section class="more-articles"  infinite-scroll='ctrl.loadMore()' infinite-scroll-distance='1'>
 	
-<div  ng-repeat="article in ctrl.articles" class="more-articles__article-{{article.id}}" style="background: url(../../../images/articles/{{article.image}})">
+<div  ng-repeat="article in ctrl.articles" class="more-articles__article-{{article.id}}">
+<img ng-src='../../../images/articles/{{article.image}}'></img>
+
 
 <div class="more-articles_infos {{article.category}}">
  	<div class="category-icon">
