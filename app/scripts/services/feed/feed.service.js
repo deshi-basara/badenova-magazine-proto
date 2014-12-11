@@ -25,7 +25,7 @@
                 {id: 8, img: 'saveenergy.png', name: 'Energie sparen', color: 'feed-light-orange'}
             ],
 
-            getFeedItems: getFeedItems,
+            getFeedValues: getFeedValues,
             initFeed: initFeed
         };
 
@@ -66,8 +66,11 @@
             return cb(true);
         }
 
-        function getFeedItems() {
-
+        /**
+         * Fetches all feedItems from the localStorage
+         */
+        function getFeedValues() {
+            
         }
 
     }
