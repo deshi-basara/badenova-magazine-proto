@@ -83,7 +83,7 @@
 <!-- Feedbar -->
 <div id="feed">
 
-	<!-- Add Feeds -->
+	<!-- Add Feed -->
 	<div class="feed-add">
 		<i class="ion-ios-plus" ng-click="ctrl.toggleFeed()" ng-class="{ 'open': ctrl.openBoxName }"></i>
 	</div>
@@ -94,6 +94,11 @@
 			<i class="ion-ios-close" ng-click="ctrl.toggleFeedCategory(item.id)"></i>
 			<img src="images/feed/{{ item.img }}">
 		</div>
+	</div>
+
+	<!-- Export Feed -->
+	<div class="feed-export">
+		<i class="ion-ios-download-outline" ng-click="ctrl.exportPdf()" ng-class="{ 'loading': ctrl.exportLoading }"></i>
 	</div>
 
 </div>

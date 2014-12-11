@@ -6,13 +6,27 @@
         .module('app')
         .controller('NavCtrl', NavCtrl);
 
-    NavCtrl.$inject = ['$modal', 'NavService', 'uiGmapGoogleMapApi'];
+    NavCtrl.$inject = ['$modal', 'NavService', 'uiGmapGoogleMapApi', '$timeout'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function NavCtrl($modal, NavService, uiGmapGoogleMapApi) {
+    function NavCtrl($modal, NavService, uiGmapGoogleMapApi, $timeout) {
         var ctrl = this;
+
+        /**
+         * Fakes an pdf export and handles the export animation.
+         */
+        function exportPdf() {
+            // start loading
+            ctrl.exportLoading = true;
+
+            // wait 3000ms before exporting the pdf
+            $timeout(function() {
+                window.open('https://www.badenova.de/mediapool/media/dokumente/unternehmensbereiche_1/kommunikation_1/printmedien_1/meine_energie/2014_3/meine_energie_04-2014.pdf');
+            ctrl.exportLoading = false;
+            }, 3000);
+        }
 
         /**
          * Toggles the left boxes identified by their name-
@@ -55,6 +69,7 @@
         //////////////////////
 
         angular.extend(ctrl, {
+            exportLoading: false,
             feedItems: NavService.getFeedItems(),
             open: {
                 feed: false,
@@ -63,6 +78,7 @@
             },
             openBoxName: null,
 
+            exportPdf: exportPdf,
             toggleBox: toggleBox,
             toggleFeed: toggleFeed,
             toggleFeedCategory: toggleFeedCategory
