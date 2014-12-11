@@ -34,7 +34,7 @@ $ gulp serve
 ========
 ### Todo
 
-* Navigation-Bar (Simon)
+* Navigation-Bar (Simon) - fertig
 * Personalization-Bar with LocalStorage (Simon) - fertig
 * Landing Page with article overview & infinite load (Marvin)
 * Article Detail View (Marvin)
@@ -43,4 +43,4 @@ $ gulp serve
 * Media View 
 * Contact View (Marvin)
 * Fake PDF-Export (Simon) - fertig
-* Badenova Responsive Logo (Simon)
+* Badenova Responsive Logo (Simon) - fertig
