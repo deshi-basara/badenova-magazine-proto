@@ -59,7 +59,7 @@
             open: {
                 feed: false,
                 search: false,
-                map: true
+                map: false
             },
             openBoxName: null,
 
