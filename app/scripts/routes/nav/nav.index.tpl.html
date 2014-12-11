@@ -36,15 +36,18 @@
 	</div>
 </nav>
 
-<!-- Loader --
-<div class="bad-loader" ng-class="{ 'hide': ctrl.preloaderHide }">
+<!-- Loader -->
+<div class="bad-loader" ng-hide="ctrl.preloaderHide">
 	<div class="bad-loader-content">
 		<img src="images/loader/bad-loader.gif">
 	</div>
-</div>-->
+</div>
 
 <!-- Nested view content -->
-<section ui-view class="nested-container"></section>
+<section ui-view class="nested-container">
+
+
+</section>
 
 
 <!-- Search-Box -->

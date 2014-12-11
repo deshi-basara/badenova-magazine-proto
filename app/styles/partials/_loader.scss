@@ -1,5 +1,5 @@
 .bad-loader {
-    position: relative;
+    position: absolute;
 	float: left;
     background-color: $bad-white;
     z-index: 200;
@@ -12,7 +12,10 @@
 
     z-index: 2;
 
-    @include transition(opacity 0.3s ease-in-out);
+    @include transition(all 1.3s ease-in-out);
+    &.ng-hide {
+        opacity: 0;
+    }
 
     .bad-loader-content {
         display: table-cell;
@@ -22,8 +25,4 @@
             filter: grayscale(1);
         }
     }
-}
-
-.bad-loader.hide {
-    opacity: 0;
 }

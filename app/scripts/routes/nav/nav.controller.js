@@ -112,6 +112,13 @@
                 }, 700)
             });
 
+            /**
+             * Hide the loader, when dom is ready
+             */
+            $timeout(function() {
+                ctrl.preloaderHide = true;
+            }, 1000);
+
         });
 
         //////////////////////
