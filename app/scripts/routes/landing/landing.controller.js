@@ -16,24 +16,24 @@
 
 
    
-    function loadMore() {
-    var last = ctrl.articles[ctrl.articles.length - 1];
-    var next = ctrl.articles.length+1;
-    for(var i = next; i <= next+3; i++) {
-    var newArticle = {id: i,
-                        image: "image3.jpg",
-                        title: "Lorem ipsum dolor sit amet",
-                        category: "family",
-                        categoryIcon: "../../images/feed/family.png" ,
-                        date: "01.01.2014",
-                        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
-                        content: ""};
+        function loadMore() {
+            var last = ctrl.articles[ctrl.articles.length - 1];
+            var next = ctrl.articles.length+1;
+            for(var i = next; i <= next+3; i++) {
+                var newArticle = {
+                    id: i,
+                    image: "image3.jpg",
+                    title: "Lorem ipsum dolor sit amet",
+                    category: "family",
+                    categoryIcon: "../../images/feed/family.png" ,
+                    date: "01.01.2014",
+                    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
+                    content: ""
+                };
 
-      ctrl.articles.push(newArticle);
-    }
-}
-
-    
+                ctrl.articles.push(newArticle);
+            }
+        }
 
         //////////////////////
 
