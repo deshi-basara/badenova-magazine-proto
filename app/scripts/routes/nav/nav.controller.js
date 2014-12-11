@@ -6,12 +6,12 @@
         .module('app')
         .controller('NavCtrl', NavCtrl);
 
-    NavCtrl.$inject = ['$modal', 'NavService'];
+    NavCtrl.$inject = ['$modal', 'NavService', 'uiGmapGoogleMapApi'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function NavCtrl($modal, NavService) {
+    function NavCtrl($modal, NavService, uiGmapGoogleMapApi) {
         var ctrl = this;
 
         /**
@@ -58,7 +58,8 @@
             feedItems: NavService.getFeedItems(),
             open: {
                 feed: false,
-                search: true
+                search: false,
+                map: true
             },
             openBoxName: null,
 
@@ -74,6 +75,11 @@
         //////////////////////
 
         //openFeedModal();
+
+        uiGmapGoogleMapApi.then(function(maps) {
+            // start in freiburg
+            ctrl.map = { center: { latitude: 47.9873111, longitude: 7.79642 }, zoom: 12 };
+        });
 
     }
 

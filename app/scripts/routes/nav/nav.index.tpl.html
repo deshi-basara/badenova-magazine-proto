@@ -44,6 +44,7 @@
 <!-- Nested view content -->
 <section ui-view class="nested-container"></section>
 
+
 <!-- Search-Box -->
 <div id="search-box" ng-class="{ 'open': ctrl.open.search }">
 
@@ -62,6 +63,23 @@
 	</div>
 </div>
 
+
+<!-- Map-Box -->
+<div id="map-box" ng-class="{ 'open': ctrl.open.map }">
+
+	<div class="map-box-content">
+
+		<ui-gmap-google-map class="map-canvas" center='ctrl.map.center' zoom='ctrl.map.zoom'></ui-gmap-google-map>
+
+		<div class="map-nearby">
+			Nearby
+		</div>
+
+	</div>
+
+</div>
+
+
 <!-- Feedbar -->
 <div id="feed">
 
@@ -79,7 +97,6 @@
 	</div>
 
 </div>
-
 <!-- Feedbar Box -->
 <div id="feed-box" ng-class="{ 'open': ctrl.open.feed }">
 	<div class="feed-box-content">
