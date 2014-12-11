@@ -6,12 +6,12 @@
         .module('app')
         .controller('NavCtrl', NavCtrl);
 
-    NavCtrl.$inject = ['$modal', 'NavService', 'uiGmapGoogleMapApi', '$timeout'];
+    NavCtrl.$inject = ['$modal', 'NavService', 'uiGmapGoogleMapApi', '$timeout', '$document'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function NavCtrl($modal, NavService, uiGmapGoogleMapApi, $timeout) {
+    function NavCtrl($modal, NavService, uiGmapGoogleMapApi, $timeout, $document) {
         var ctrl = this;
 
         /**
@@ -78,6 +78,7 @@
         angular.extend(ctrl, {
             exportLoading: false,
             feedItems: NavService.getFeedItems(),
+            navDocked: false,
             open: {
                 feed: false,
                 search: false,
@@ -93,7 +94,25 @@
 
         ///////////////////////
 
-        //=> All broadcast listeners
+        angular.element(document).ready(function() {
+
+            /**
+             * Watches the scroll position of the container (debounced).
+             */
+            var scrollContainer = angular.element(document.getElementsByClassName('nested-container'));
+            scrollContainer.on('scroll', function() {
+                $timeout(function() {
+                    // if the user scrolled down 200px, dock the side navigation
+                    if(scrollContainer[0].scrollTop >= 200) {
+                        ctrl.navDocked = true;
+                    }
+                    else {
+                        ctrl.navDocked = false;
+                    }
+                }, 700)
+            });
+
+        });
 
         //////////////////////
 
