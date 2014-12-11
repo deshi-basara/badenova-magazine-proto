@@ -69,8 +69,28 @@
 
 	<div class="map-box-content">
 
-		<ui-gmap-google-map class="map-canvas" center='ctrl.map.center' zoom='ctrl.map.zoom'></ui-gmap-google-map>
+		<!-- GoogleMaps -->
+		<ui-gmap-google-map class="map-canvas" center='ctrl.map.center' zoom='ctrl.map.zoom' options="ctrl.map.options">
 
+			<!-- Markers -->
+			<ui-gmap-markers models="ctrl.mapMarkers" coords="'coords'" click="">
+
+				<!-- Marker Windows -->
+				<ui-gmap-windows>
+	                <div>
+	                    I should not be attached to a
+	                    marker.
+	                    <p ng-non-bindable >This is an info window at {{ latitude | number:4 }}, {{ longitude | number:4 }}!</p>
+
+	                    <p class="muted">My marker will stay open when the window is popped up!</p>
+	                </div>
+            	</ui-gmap-windows>
+
+			</ui-gmap-markers>
+
+		</ui-gmap-google-map>
+
+		<!-- Nearby list -->
 		<div class="map-nearby">
 			Nearby
 		</div>
