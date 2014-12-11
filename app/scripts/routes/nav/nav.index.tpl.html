@@ -47,12 +47,12 @@
 <!-- Search-Box -->
 <div id="search-box" ng-class="{ 'open': ctrl.open.search }">
 
-	<div class="search-box-content">
+	<!-- Search-Input -->
+	<div class="search-input">
+		<input type="text" ng-model="ctrl.searchString" placeholder="Suchen ...">
+	</div>
 
-		<!-- Search-Input -->
-		<div class="search-input">
-			<input type="text" ng-model="ctrl.searchString" placeholder="Suchen ...">
-		</div>
+	<div class="search-box-content">
 
 		<!-- Search-Results -->
 		<div class="search-results">

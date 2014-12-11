@@ -58,7 +58,7 @@
             feedItems: NavService.getFeedItems(),
             open: {
                 feed: false,
-                search: false
+                search: true
             },
             openBoxName: null,
 
