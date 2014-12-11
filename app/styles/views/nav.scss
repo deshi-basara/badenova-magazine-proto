@@ -15,11 +15,35 @@
     &.docked {
         width: 80px;
         flex: 0 0 80px;
+
+        .nav-logo {
+            padding-left: 7px;
+            @include transform(scale(0.8));
+        }
     }
 
     &:hover {
         width: 200px;
         flex: 0 0 200px;
+
+        .nav-logo {
+            padding-left: 29px;
+            @include transform(scale(1));
+        }
+    }
+
+    .nav-logo {
+        position: absolute;
+        text-align: left;
+        padding-left: 29px;
+        width: 100%;
+
+        @include transition(all 1s ease-in-out);
+
+        h3 {
+            font-size: em(24);
+
+        }
     }
 
     .nav-items {

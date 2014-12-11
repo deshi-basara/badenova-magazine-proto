@@ -1,7 +1,9 @@
 <!-- Navigation -->
-<nav id="nav">
+<nav id="nav" ng-class="{ 'docked': ctrl.navDocked && !ctrl.openBoxName }">
 	<!-- Nav logo -->
-	<div class="nav-logo"></div>
+	<div class="nav-logo">
+		<h3>meine energie</h3>
+	</div>
 
 	<!-- Nav items -->
 	<div class="nav-items">
@@ -34,25 +36,29 @@
 	</div>
 </nav>
 
-<!-- Nested View --
-<div class="bad-loader" ng-class="{ 'hide': ctrl.preloaderHide }">
+<!-- Loader -->
+<div class="bad-loader" ng-hide="ctrl.preloaderHide">
 	<div class="bad-loader-content">
 		<img src="images/loader/bad-loader.gif">
 	</div>
-</div>-->
+</div>
 
 <!-- Nested view content -->
-<section ui-view class="nested-container"></section>
+<section ui-view class="nested-container">
+
+
+</section>
+
 
 <!-- Search-Box -->
 <div id="search-box" ng-class="{ 'open': ctrl.open.search }">
 
-	<div class="search-box-content">
+	<!-- Search-Input -->
+	<div class="search-input">
+		<input type="text" ng-model="ctrl.searchString" placeholder="Suchen ...">
+	</div>
 
-		<!-- Search-Input -->
-		<div class="search-input">
-			<input type="text" ng-model="ctrl.searchString" placeholder="Suchen ...">
-		</div>
+	<div class="search-box-content">
 
 		<!-- Search-Results -->
 		<div class="search-results">
@@ -62,10 +68,49 @@
 	</div>
 </div>
 
+
+<!-- Map-Box -->
+<div id="map-box" ng-class="{ 'open': ctrl.open.map }">
+
+	<div class="map-box-content">
+
+		<!-- GoogleMaps -->
+		<ui-gmap-google-map class="map-canvas" center='ctrl.map.center' zoom='ctrl.map.zoom' options="ctrl.map.options">
+
+			<!-- Markers -->
+			<ui-gmap-markers models="ctrl.mapMarkers" coords="'coords'" click="'onClicked'">
+
+				<!-- Marker Windows -->
+				<ui-gmap-windows show="'show'" options="'options'">
+	                <div class="custom-overlay">
+						<div class="overlay-date">24.12.2014</div>
+						<div class="overlay-category">
+							<img ng-src="images/feed/culture.png" alt="">
+						</div>
+
+						<h5 class="headline">Overlay Title</h5>
+	                    <p class="overlay-teaser">My marker will stay open when the window is popped up!</p>
+	                </div>
+            	</ui-gmap-windows>
+
+			</ui-gmap-markers>
+
+		</ui-gmap-google-map>
+
+		<!-- Nearby list -->
+		<div class="map-nearby">
+			Nearby
+		</div>
+
+	</div>
+
+</div>
+
+
 <!-- Feedbar -->
 <div id="feed">
 
-	<!-- Add Feeds -->
+	<!-- Add Feed -->
 	<div class="feed-add">
 		<i class="ion-ios-plus" ng-click="ctrl.toggleFeed()" ng-class="{ 'open': ctrl.openBoxName }"></i>
 	</div>
@@ -78,8 +123,12 @@
 		</div>
 	</div>
 
-</div>
+	<!-- Export Feed -->
+	<div class="feed-export">
+		<i class="ion-ios-download-outline" ng-click="ctrl.exportPdf()" ng-class="{ 'loading': ctrl.exportLoading }"></i>
+	</div>
 
+</div>
 <!-- Feedbar Box -->
 <div id="feed-box" ng-class="{ 'open': ctrl.open.feed }">
 	<div class="feed-box-content">

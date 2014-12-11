@@ -1,4 +1,5 @@
 #feed {
+    position: relative;
     width: 100px;
     flex: 0 0 100px;
     height: 100%;
@@ -74,6 +75,39 @@
                 color: $bad-orange;
                 @include transform(rotate(45deg));
             }
+        }
+    }
+
+    .feed-export {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+
+        background-color: $bad-white;
+
+        i {
+            padding: 3px 11px;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: $bad-black;
+
+            @include transition(all 1s ease-in-out);
+            &:hover {
+                background-color: $bad-orange;
+            }
+
+            &.loading {
+                animation: loading 2s ease-in-out 0s infinite;
+            }
+        }
+
+        .ion-ios-download-outline {
+            font-size: em(25);
+            cursor: pointer;
+            color: $bad-white;
         }
     }
 }
@@ -211,5 +245,20 @@
     @include transition(background-color 0.7s ease-in-out);
     &:hover {
         background-color: $bad-green !important;
+    }
+}
+
+@keyframes loading {
+    0% {
+        background-color: $bad-orange;
+        @include transform(scale(1));
+    }
+    50% {
+        background-color: $bad-light-orange;
+        @include transform(scale(1.2));
+    }
+    100% {
+        background-color: $bad-orange;
+        @include transform(scale(1));
     }
 }
