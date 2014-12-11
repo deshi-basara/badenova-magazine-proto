@@ -40,6 +40,12 @@
          * @param  {string} boxName [Name of the box we want to toggle]
          */
         function toggleBox(boxName) {
+            // close the current box, if open
+            console.log(ctrl.openBoxName);
+            if(ctrl.openBoxName) {
+                ctrl.open[ctrl.openBoxName] = false;
+            }
+            // open the current box
             ctrl.open[boxName] = true;
             // change the close button
             ctrl.openBoxName = boxName;
