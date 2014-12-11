@@ -209,12 +209,12 @@
     }
 
     &.active {
-        background-color: $bad-light-blue !important;
+        background-color: $bad-blue !important;
     }
 
     @include transition(background-color 0.7s ease-in-out);
     &:hover {
-        background-color: $bad-blue !important;
+        background-color: $bad-grey !important;
     }
 }
 .feed-light-orange {
@@ -224,12 +224,12 @@
     }
 
     &.active {
-        background-color: $bad-light-orange !important;
+        background-color: $bad-orange !important;
     }
 
     @include transition(background-color 0.7s ease-in-out);
     &:hover {
-        background-color: $bad-orange !important;
+        background-color: $bad-grey !important;
     }
 }
 .feed-light-green {
@@ -239,12 +239,12 @@
     }
 
     &.active {
-        background-color: $bad-light-green !important;
+        background-color: $bad-green !important;
     }
 
     @include transition(background-color 0.7s ease-in-out);
     &:hover {
-        background-color: $bad-green !important;
+        background-color: $bad-grey !important;
     }
 }
 
