@@ -1,4 +1,4 @@
-<div id="landing">
+<div id="landing" ng-controller="LandingCtrl">
 
 <section class="top-article">
 	
@@ -7,9 +7,9 @@
 
 </section>
 
-<section class="more-articles" >
+<section class="more-articles"  infinite-scroll='ctrl.loadMore()' infinite-scroll-distance='2'>
 	
-<div ng-repeat="article in ctrl.articles" class="more-articles__article-{{article}}"></div>
+<div  ng-repeat="article in ctrl.articles" class="more-articles__article-{{article}}"></div>
 
 </section>
 
