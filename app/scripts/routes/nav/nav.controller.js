@@ -32,7 +32,6 @@
          * Is called whenever a marker on the map is clicked.
          */
         function onMarkerClicked(marker) {
-            alert('clicked');
             console.log(marker);
         }
 
@@ -82,7 +81,7 @@
             open: {
                 feed: false,
                 search: false,
-                map: false
+                map: true
             },
             openBoxName: null,
 
@@ -247,7 +246,14 @@
 
             // markers
             ctrl.mapMarkers = [
-                {id: 1, coords: {latitude: 47.9873111, longitude: 7.79642}}
+                {id: 1, coords: {latitude: 47.9873111, longitude: 7.79642}, content: {
+                    category: 'family',
+                    title: 'Marker Test 1',
+                    teaserText: 'Lorem'
+                }, options: {
+                    boxClass: 'custom-marker-window'
+                },
+                show: false}
             ];
 
             // add the marker click events to each marker

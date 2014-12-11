@@ -34,7 +34,7 @@
 	</div>
 </nav>
 
-<!-- Nested View --
+<!-- Loader --
 <div class="bad-loader" ng-class="{ 'hide': ctrl.preloaderHide }">
 	<div class="bad-loader-content">
 		<img src="images/loader/bad-loader.gif">
@@ -73,16 +73,18 @@
 		<ui-gmap-google-map class="map-canvas" center='ctrl.map.center' zoom='ctrl.map.zoom' options="ctrl.map.options">
 
 			<!-- Markers -->
-			<ui-gmap-markers models="ctrl.mapMarkers" coords="'coords'" click="">
+			<ui-gmap-markers models="ctrl.mapMarkers" coords="'coords'" click="'onClicked'">
 
 				<!-- Marker Windows -->
-				<ui-gmap-windows>
-	                <div>
-	                    I should not be attached to a
-	                    marker.
-	                    <p ng-non-bindable >This is an info window at {{ latitude | number:4 }}, {{ longitude | number:4 }}!</p>
+				<ui-gmap-windows show="'show'" options="'options'">
+	                <div class="custom-overlay">
+						<div class="overlay-date">24.12.2014</div>
+						<div class="overlay-category">
+							<img ng-src="images/feed/culture.png" alt="">
+						</div>
 
-	                    <p class="muted">My marker will stay open when the window is popped up!</p>
+						<h5 class="headline">Overlay Title</h5>
+	                    <p class="overlay-teaser">My marker will stay open when the window is popped up!</p>
 	                </div>
             	</ui-gmap-windows>
 
