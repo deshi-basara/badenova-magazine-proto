@@ -30,14 +30,14 @@
          */
         function getFeedItems(fileObj) {
             var feedItems = [
-                {img: 'culture.png', name: 'Kultur'},
-                {img: 'family.png', name: 'Familie'},
-                {img: 'freetime.png', name: 'Freizeit'},
-                {img: 'greenenergy.png', name: 'Ökostrom'},
-                {img: 'naturalgas.png', name: 'Erdgas'},
-                {img: 'nature.png', name: 'Natur'},
-                {img: 'news.png', name: 'Aktuelles'},
-                {img: 'saveenergy.png', name: 'Energie sparen'}
+                {id: 0, img: 'culture.png', name: 'Kultur', color: 'feed-light-blue', active: true },
+                {id: 1, img: 'family.png', name: 'Familie', color: 'feed-light-orange', active: true},
+                {id: 2, img: 'freetime.png', name: 'Freizeit', color: 'feed-light-green', active: true},
+                {id: 3, img: 'greenenergy.png', name: 'Ökostrom', color: 'feed-light-blue', active: true},
+                {id: 4, img: 'naturalgas.png', name: 'Erdgas', color: 'feed-light-orange', active: true},
+                {id: 5, img: 'nature.png', name: 'Natur', color: 'feed-light-green', active: true},
+                {id: 6, img: 'news.png', name: 'Aktuelles', color: 'feed-light-blue', active: true},
+                {id: 7, img: 'saveenergy.png', name: 'Energie sparen', color: 'feed-light-orange', active: true}
             ];
 
             return feedItems;

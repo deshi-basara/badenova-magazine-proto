@@ -15,23 +15,56 @@
         var ctrl = this;
 
         /**
-         * Opens the feedbar-modal.
+         * Toggles the left boxes identified by their name-
+         * @param  {string} boxName [Name of the box we want to toggle]
          */
-        function openFeedModal() {
-            var modalInstance = $modal.open({
-                templateUrl: 'feed-modal.html',
-                controller: 'NavModalCtrl',
-                controllerAs: 'modal',
-                size: 'lg'
-            });
+        function toggleBox(boxName) {
+            ctrl.open[boxName] = true;
+            // change the close button
+            ctrl.openBoxName = boxName;
+        }
+
+        /**
+         * Toggles the right feedbar-box.
+         */
+        function toggleFeed() {
+            // check if there is already a box open
+            if(ctrl.openBoxName) {
+                // close open box & reset button
+                ctrl.open[ctrl.openBoxName] = false;
+                ctrl.openBoxName = null;
+            }
+            else {
+                // no box open, user wants to see the feed-box
+                ctrl.open.feed = (ctrl.open.feed === false) ? true : false;
+                ctrl.openBoxName = 'feed';
+            }
+        }
+
+        /**
+         * Toggles the feed-category on or off.
+         * @param  {int}    categoryId [Array-index of the category we want to toggle]
+         */
+        function toggleFeedCategory(categoryId) {
+            var categoryObject = ctrl.feedItems[categoryId];
+
+            // toggle it
+            ctrl.feedItems[categoryId].active = (categoryObject.active === false) ? true : false;
         }
 
         //////////////////////
 
         angular.extend(ctrl, {
             feedItems: NavService.getFeedItems(),
+            open: {
+                feed: false,
+                search: false
+            },
+            openBoxName: null,
 
-            openFeedModal: openFeedModal
+            toggleBox: toggleBox,
+            toggleFeed: toggleFeed,
+            toggleFeedCategory: toggleFeedCategory
         });
 
         ///////////////////////
@@ -41,6 +74,7 @@
         //////////////////////
 
         //openFeedModal();
+
     }
 
 })();
