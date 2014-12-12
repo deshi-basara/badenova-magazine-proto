@@ -6,16 +6,44 @@
         .module("app")
         .controller("LandingCtrl", LandingCtrl);
 
-    LandingCtrl.$inject = ["$scope", "$rootScope", 'ArticlesService'];
+    LandingCtrl.$inject = ['$scope', 'FeedService', 'ArticlesService'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function LandingCtrl($scope, $rootScope, ArticlesService) {
+    function LandingCtrl($scope, FeedService, ArticlesService) {
         var ctrl = this;
 
+        /**
+         * Initiates the feedFilter for filtering all articles accordingly to the selected
+         * feed items.
+         */
+        function initFeedFilter() {
+            // fetch all feed values and push all feed-categfory names to the filter-array
+            var allFeedValues = FeedService.getFeedItems();
+            var feedFilter = [];
+            for (var i = 0; i < allFeedValues.length; i++) {
+                feedFilter.push(allFeedValues[i].category);
+            };
 
-   
+            ctrl.feedFilter = feedFilter;
+        }
+
+        /**
+         * [filterArticles description]
+         * @return {[type]} [description]
+         */
+        function filterArticles() {
+            return function(article) {
+                var isFiltered = ctrl.feedFilter.indexOf(article.category);
+                return isFiltered !== -1;
+            }
+        }
+
+        /**
+         * Funktions-Beschreibung
+         * @return {[type]} [description]
+         */
         function loadMore() {
             var last = ctrl.articles[ctrl.articles.length - 1];
             var next = ctrl.articles.length+1;
@@ -39,17 +67,43 @@
 
         angular.extend(ctrl, {
             articles: ArticlesService.getAllArticles(),
+            feedFilter: null,
 
-           loadMore: loadMore
+            filterArticles: filterArticles,
+            loadMore: loadMore
         });
 
         ///////////////////////
 
-        //=> All broadcast listeners
+        /**
+         * Adds a category to the filter on $broadcast.
+         */
+        $scope.$on('feed.add', function(broadcastEvent, category) {
+            $scope.$apply(function() {
+                ctrl.feedFilter.push(category);
+            });
+        });
+
+        /**
+         * Removes a category from the filter on $broadcast.
+         */
+        $scope.$on('feed.remove', function(broadcastEvent, category) {
+            console.log(category);
+            // find the category we want to remove
+            var index = ctrl.feedFilter.indexOf(category);
+            console.log(index);
+            if(index !== -1) {
+                // remove from the filter
+                ctrl.feedFilter.splice(index, 1);
+                console.log(ctrl.feedFilter);
+            }
+        });
+
 
         //////////////////////
 
-        //=> All controller autostart functions
+        initFeedFilter();
+
     }
 
 })();

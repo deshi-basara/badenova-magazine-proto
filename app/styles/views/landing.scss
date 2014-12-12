@@ -254,6 +254,7 @@ $list: 0;
 		& > div {
 
 		@include span-columns(4);
+		@include omega(3n);
 		background: #eee;
 		height: 40%;
 		margin-top: 1%;
@@ -454,7 +455,7 @@ $list: 0;
 		@each $i in $list {
 		  	
 		  	.more-articles__article-#{$i}{
-		    margin-right: 0;
+		    margin-right: 10px;
 
 		 	}
 
