@@ -6,13 +6,41 @@
         .module('app')
         .controller('NavCtrl', NavCtrl);
 
-    NavCtrl.$inject = ['$modal', 'NavService', 'uiGmapGoogleMapApi', '$timeout', '$document'];
+    NavCtrl.$inject = ['FeedService', 'uiGmapGoogleMapApi', '$timeout', '$document', '$rootScope', '$scope'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function NavCtrl($modal, NavService, uiGmapGoogleMapApi, $timeout, $document) {
+    function NavCtrl(FeedService, uiGmapGoogleMapApi, $timeout, $document, $rootScope, $scope) {
         var ctrl = this;
+        var scrollContainer = null;
+
+        var checkScrollPosition = debounceFunction(function() {
+            // if the user scrolled down 200px, dock the side navigation
+            if(scrollContainer[0].scrollTop >= 200) {
+                ctrl.navDocked = true;
+            }
+            else {
+                ctrl.navDocked = false;
+            }
+            
+            $scope.$apply();
+        }, 700);
+
+        function debounceFunction(func, wait, immediate) {
+            var timeout;
+            return function() {
+                var context = this, args = arguments;
+                var later = function() {
+                    timeout = null;
+                    if (!immediate) func.apply(context, args);
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) func.apply(context, args);
+            };
+        }
 
         /**
          * Fakes an pdf export and handles the export animation.
@@ -40,8 +68,11 @@
          * @param  {string} boxName [Name of the box we want to toggle]
          */
         function toggleBox(boxName) {
+            // if the user wants to close the current box by clicking the navigation item
+            if(ctrl.openBoxName === boxName) {
+                return ctrl.open[ctrl.openBoxName] = false;
+            }
             // close the current box, if open
-            console.log(ctrl.openBoxName);
             if(ctrl.openBoxName) {
                 ctrl.open[ctrl.openBoxName] = false;
             }
@@ -77,13 +108,16 @@
 
             // toggle it
             ctrl.feedItems[categoryId].active = (categoryObject.active === false) ? true : false;
+
+            // broadcast the change
+            $rootScope.$broadcast('feed.remove', ctrl.feedItems[categoryId].category);
         }
 
         //////////////////////
 
         angular.extend(ctrl, {
             exportLoading: false,
-            feedItems: NavService.getFeedItems(),
+            feedItems: FeedService.getFeedItems(),
             navDocked: false,
             open: {
                 feed: false,
@@ -105,18 +139,8 @@
             /**
              * Watches the scroll position of the container (debounced).
              */
-            var scrollContainer = angular.element(document.getElementsByClassName('nested-container'));
-            scrollContainer.on('scroll', function() {
-                $timeout(function() {
-                    // if the user scrolled down 200px, dock the side navigation
-                    if(scrollContainer[0].scrollTop >= 200) {
-                        ctrl.navDocked = true;
-                    }
-                    else {
-                        ctrl.navDocked = false;
-                    }
-                }, 700)
-            });
+            scrollContainer = angular.element(document.getElementsByClassName('nested-container'));
+            scrollContainer.on('scroll', checkScrollPosition);
 
             /**
              * Hide the loader, when dom is ready
