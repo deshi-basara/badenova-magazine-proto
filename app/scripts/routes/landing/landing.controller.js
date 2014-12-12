@@ -14,7 +14,6 @@
     function LandingCtrl($scope, FeedService, ArticlesService) {
         var ctrl = this;
 
-<<<<<<< HEAD
    
     function loadMore() {
     var last = ctrl.articles[ctrl.articles.length - 1];
@@ -45,9 +44,7 @@
    });
 
 }
-
-    
-=======
+  
         /**
          * Initiates the feedFilter for filtering all articles accordingly to the selected
          * feed items.
@@ -78,30 +75,12 @@
          * Funktions-Beschreibung
          * @return {[type]} [description]
          */
-        function loadMore() {
-            var last = ctrl.articles[ctrl.articles.length - 1];
-            var next = ctrl.articles.length+1;
-            for(var i = next; i <= next+3; i++) {
-                var newArticle = {
-                    id: i,
-                    image: "image3.jpg",
-                    title: "Lorem ipsum dolor sit amet",
-                    category: "family",
-                    categoryIcon: "../../images/feed/family.png" ,
-                    date: "01.01.2014",
-                    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
-                    content: ""
-                };
-
-                ctrl.articles.push(newArticle);
-            }
-        }
->>>>>>> 46fdaaff712efc63daf9adccbbd56c917b9c8bbf
+    
 
         //////////////////////
 
         angular.extend(ctrl, {
-<<<<<<< HEAD
+
             articles: [{id: 1,
                         titleImage: 'image1.jpg',
                         title: "Lost in Nature",
@@ -222,14 +201,13 @@
             ],*/
 
 
-           loadMore: loadMore
-=======
+
             articles: ArticlesService.getAllArticles(),
             feedFilter: null,
 
             filterArticles: filterArticles,
             loadMore: loadMore
->>>>>>> 46fdaaff712efc63daf9adccbbd56c917b9c8bbf
+
         });
 
         ///////////////////////

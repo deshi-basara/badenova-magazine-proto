@@ -25,7 +25,9 @@
             position: relative;
             height: 100%;
 
-            @include span-columns(10 of 12, $display: block-collapse);
+            @include span-columns(9 of 12, $display: block-collapse);
+
+            z-index: 1;
 
             .angular-google-map-container {
                 position: absolute;
@@ -96,10 +98,63 @@
         }
 
         .map-nearby {
-            @include span-columns(2 of 12);
+            @include span-columns(3 of 12);
+            position: relative;
             height: 100%;
+            padding: 10px;
+            box-shadow: $frame-1;
+            background-color: $bad-white;
 
-            background-color: red;
+            z-index: 2;
+
+            h4 {
+                margin-top: 14px;
+            }
+
+            .map-nearby-items {
+                position: relative;
+                top: 15px;
+                margin: 10px;
+                height: 93%;
+
+                .map-nearby-item {
+                    background-color: $bad-white;
+                    box-shadow: $frame-1;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: left;
+                    cursor: pointer;
+                    margin-bottom: 5px;
+
+                    .map-nearby-category {
+                        @include span-columns(2 of 12);
+                        height: 100%;
+
+                        img {
+                            margin-top: 5px;
+                            margin-left: 5px;
+                            display: block;
+                            width: 30px;
+                            padding: 3px;
+                            height: auto;
+                            border-radius: 1px;
+
+                            background-color: $bad-orange;
+
+                            -webkit-filter: invert(100%);
+                        }
+                    }
+
+                    .headline {
+                        @include span-columns(7 of 12);
+                    }
+
+                    .distance {
+                        @include span-columns(3 of 12);
+                        font-weight: bold;
+                    }
+                }
+            }
         }
     }
 }

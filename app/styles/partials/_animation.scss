@@ -21,3 +21,11 @@ $bad-ease-in-out: cubic-bezier(0.68, -0.55, 0.265, 1.25);
     opacity: 0;
     @include transform(scale(0.7));
 }
+
+/**
+ * Article overview
+ */
+.overview-item.ng-leave-active {
+    opacity: 0 !important;
+    @include transform(translate3d(0,15%,0) !important);
+}
