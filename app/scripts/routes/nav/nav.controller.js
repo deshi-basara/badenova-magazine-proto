@@ -28,6 +28,15 @@
                 ctrl.navDocked = false;
             }
 
+            // if the user reached the container end, start infinite loading
+            var containerHeight = (scrollContainer[0].scrollHeight/2);
+            var containerDistance = (scrollContainer[0].scrollHeight - scrollContainer[0].scrollTop);
+            console.log(containerHeight + ' >= ' + containerDistance);
+            if(containerHeight >= containerDistance) {
+                // start lazy loading
+                $rootScope.$broadcast('load.more');
+            }
+
             $scope.$apply();
         }, 1000);
 
@@ -138,7 +147,7 @@
             open: {
                 feed: false,
                 search: false,
-                map: true
+                map: false
             },
             openBoxName: null,
 
@@ -157,6 +166,7 @@
              */
             scrollContainer = angular.element(document.getElementsByClassName('nested-container'));
             scrollContainer.on('scroll', checkScrollPosition);
+            console.log(scrollContainer);
 
             /**
              * Hide the loader, when dom is ready
@@ -304,7 +314,7 @@
             ];
 
             // start in freiburg
-            ctrl.map = {
+            /*ctrl.map = {
                 center: {
                     latitude: 47.9873111,
                     longitude: 7.79642
@@ -333,7 +343,7 @@
                 marker.onClicked = function() {
                     onMarkerClicked(marker);
                 };
-            });
+            });*/
         });
 
     }
