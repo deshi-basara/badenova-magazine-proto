@@ -15,6 +15,10 @@
         var ctrl = this;
         var scrollContainer = null;
 
+        /**
+         * Debounced function, that checks the scroll position every 700ms and
+         * docks or undocks the navigation.
+         */
         var checkScrollPosition = debounceFunction(function() {
             // if the user scrolled down 200px, dock the side navigation
             if(scrollContainer[0].scrollTop >= 200) {
@@ -23,10 +27,17 @@
             else {
                 ctrl.navDocked = false;
             }
-            
-            $scope.$apply();
-        }, 700);
 
+            $scope.$apply();
+        }, 1000);
+
+        /**
+         * Debouncing function.
+         * @param  {function} func      [Function we want to debounce]
+         * @param  {int}      wait      [Time between function calls in ms]
+         * @param  {boolean}  immediate [True: trigger the function on the eading edge, instead of the trailing]
+         * @return {function}
+         */
         function debounceFunction(func, wait, immediate) {
             var timeout;
             return function() {
@@ -110,7 +121,12 @@
             ctrl.feedItems[categoryId].active = (categoryObject.active === false) ? true : false;
 
             // broadcast the change
-            $rootScope.$broadcast('feed.remove', ctrl.feedItems[categoryId].category);
+            if(ctrl.feedItems[categoryId].active) {
+                $rootScope.$broadcast('feed.add', ctrl.feedItems[categoryId].category);
+            }
+            else {
+                $rootScope.$broadcast('feed.remove', ctrl.feedItems[categoryId].category);
+            }
         }
 
         //////////////////////

@@ -69,7 +69,7 @@
 
         angular.extend(ctrl, {
             articles: ArticlesService.getAllArticles(),
-            feedFilter: null,
+            feedFilter: ['culture', 'family'],
             teaserArticle: ArticlesService.getTeaserArticle(),
 
             loadMore: loadMore
@@ -81,9 +81,8 @@
          * Adds a category to the filter on $broadcast.
          */
         $scope.$on('feed.add', function(broadcastEvent, category) {
-            $scope.$apply(function() {
-                ctrl.feedFilter.push(category);
-            });
+            console.log(category);
+            ctrl.feedFilter.push(category);
         });
 
         /**
