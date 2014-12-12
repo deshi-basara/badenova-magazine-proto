@@ -1,15 +1,14 @@
 <div id="landing">
 
-<section class="top-article">
-	
- <img ng-src='../../../images/articles/{{ctrl.articles[0].image}}'></img>
+<section class="top-article">	
+ <img ng-src='../../../images/articles/{{ctrl.articles[0].titleImage}}'></img>
  <div class="top-article_infos {{ctrl.articles[0].category}}" >
  	<div class="category-icon">
- 		<img src="../../images/feed/nature.png" alt="">
+ 		<img src="../../images/feed/{{ctrl.articles[0].categoryIcon}}" alt="">
  	</div>
      <h2>{{ctrl.articles[0].title}}</h2>  
      <p>{{ctrl.articles[0].description}}</p>  
-         <a href="#" class="btn-ghost">Mehr Lesen</a>  
+         <a href="#/article-detail" data-nr="1" class="btn-ghost">Mehr Lesen</a>  
  </div>  
 
 
@@ -18,7 +17,7 @@
 <section class="more-articles"  infinite-scroll='ctrl.loadMore()' infinite-scroll-distance='1'>
 	
 <div  ng-repeat="article in ctrl.articles" class="more-articles__article-{{article.id}}">
-<img ng-src='../../../images/articles/{{article.image}}'></img>
+<img ng-src='../../../images/articles/{{article.titleImage}}'></img>
 
 
 <div class="more-articles_infos {{article.category}}">
@@ -26,7 +25,7 @@
  		<img src="{{article.categoryIcon}}" alt="">
  	</div>
      <h4>{{article.title}}</h4>  
-         <a href="#" class="btn-ghost">lesen</a>  
+         <a ui-sref="nav.article-detail" data-nr="{{article.id}}" class="btn-ghost">lesen</a>  
  </div>  
 
 

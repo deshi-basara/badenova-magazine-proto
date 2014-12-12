@@ -1,0 +1,333 @@
+#article-detail {
+	
+	width: 95%;
+	height: 100%;
+	margin: 1% auto 1% auto;
+
+	@include outer-container;
+	max-width: 100%;
+
+	& h1, h2, h3 {
+
+		margin-top: 0;
+	}
+
+
+	& header {
+
+		border-bottom: 6px solid $bad-green;
+		height: 60px;
+		position: relative;
+		margin-bottom: 1%;
+
+		-webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+ 	-moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+ 	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+		.category-icon {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 60px;
+				height: 60px;
+				background-color: $bad-green;
+				text-align: center;
+				
+				& img {
+		
+					height: 80%;
+					width: auto;
+					margin-top: 8px;
+					-webkit-filter: invert(100%);
+
+				}
+
+
+		}
+
+
+		& h1{
+
+			position: absolute;
+			top: 4px;
+			left: 75px;
+		}
+
+		.author{
+
+			position: absolute;
+			top: 20px;
+			left: 75px;
+
+		}
+
+		.date{
+
+			position: absolute;
+			top: 8px;
+			right: 10px;
+					
+		}
+
+
+	}
+
+	.header-nature, .header-freetime{
+
+	border-bottom: 6px solid $bad-green;
+
+
+		.category-icon {
+
+					
+					background-color: $bad-green;
+
+
+		}
+
+	}
+
+	.header-culture, .header-news, .header-greenenergy{
+
+	border-bottom: 6px solid $bad-blue;
+
+
+		.category-icon{
+
+					
+					background-color: $bad-blue;
+
+
+		}
+
+	}
+
+	.header-family, .header-naturalgas, .header-saveenergy{
+
+	border-bottom: 6px solid $bad-orange;
+
+
+		.category-icon{
+
+					
+					background-color: $bad-orange;
+
+		}
+
+	}
+
+
+	& footer {	
+
+	 position: relative;
+	 bottom: 0;
+	 left: 0;
+	 margin-bottom: 1%;
+
+	 width: 100%;
+	 height: 90px;
+
+	 -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+ 	-moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+ 	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+ 	border-top: 6px solid $bad-green;
+
+ 	.social-networks {
+
+		width: 270px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+
+		.facebook{
+		
+			color: #fff;
+			float: left;
+			margin-right: 15px;
+			margin-left: 15px;
+			width: 60px;
+			height: 60px;
+			padding-left: 18px;
+			padding-top: 9px;
+			border-radius: 50%;
+			background: $bad-grey;
+			
+
+			&:hover{
+					
+						background: #3b5998;
+
+					}
+		}
+
+	
+			.google, .twitter{
+
+				color: #fff;
+				float: left;
+				margin-right: 15px;
+				margin-left: 15px;
+				width: 60px;
+				height: 60px;
+				padding-left: 12px;
+				padding-top: 9px;
+				border-radius: 50%;
+				background: $bad-grey;
+			}
+
+			.google:hover {
+				
+				background: #d34836;
+
+			}
+
+			.twitter:hover {
+				
+				background: #4099FF;
+
+			}
+
+ 	}
+
+}
+
+ 	.footer-nature, .footer-freetime{
+
+		border-top: 6px solid $bad-green;
+
+	}
+
+	.footer-culture, .footer-news, .footer-greenenergy{
+
+		border-top: 6px solid $bad-blue;
+	
+	}
+
+	.footer-family, .footer-naturalgas, .footer-saveenergy{
+
+		border-top: 6px solid $bad-orange;
+
+	}
+
+ 	
+
+	.title-img {
+
+	height: 80%;
+	@include outer-container;
+	background: #eee;
+	max-width: 100%;
+ 	overflow: hidden;
+ 	position: relative;
+
+		& > img {
+
+		width:  100%;
+	  	height: auto;
+
+	  	display: block;
+	    position: relative; 
+
+	    }		
+
+	}
+	
+	.article-section {
+
+		width: 100%;
+		height: auto;
+		padding: 2%;
+		margin-bottom: 1%;
+
+		-webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+	 	-moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+	 	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+ 
+
+
+	}
+
+	.image-section {
+
+			width: 100%;
+			padding: 2%;
+			margin-bottom: 1%;
+			-webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+	 		-moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+	 		box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+	 		& h3 {
+
+					margin-bottom: 3%;
+				}
+
+		 	.image-slider {
+
+				width: 90%;
+				margin-left: auto !important;
+				margin-right: auto !important;
+				margin-top: auto !important;
+				margin-bottom: auto !important;
+
+				& div {
+
+					margin-right: 1%;
+
+
+					& img {
+
+						width: 100%;
+						height: auto;
+
+
+					}
+
+
+				}
+
+			.slick-dots {
+
+					position: static;
+					margin-top: 1%;
+				}
+
+			}
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

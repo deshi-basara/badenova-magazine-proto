@@ -46,6 +46,14 @@ angular
       templateUrl: 'scripts/routes/landing/landing.index.tpl.html',
       controller: 'LandingCtrl',
       controllerAs: 'ctrl'
+    }
+
+    )
+    .state('nav.article-detail', {
+      url: '/article-detail',
+      templateUrl: 'scripts/routes/article-detail/article.detail.index.tpl.html',
+      controller: 'ArticleDetailCtrl',
+      controllerAs: 'ctrl'
     });
 
   // if none of the above states are matched, use this as the fallback
