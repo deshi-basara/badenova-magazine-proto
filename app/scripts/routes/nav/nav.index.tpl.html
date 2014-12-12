@@ -99,7 +99,16 @@
 
 		<!-- Nearby list -->
 		<div class="map-nearby">
-			Nearby
+			<h4>Badenova in deiner Nähe</h4>
+			<div class="map-nearby-items">
+				<div class="map-nearby-item" "ng-repeat="article in ctrl.articles"">
+					<div class="map-nearby-category">
+						<img ng-src="images/feed/culture.png" alt="">
+					</div>
+					<span class="headline">'{{ article.name }}'</span>
+					<span class="distance">10 km</span>
+				</div>
+			</div>
 		</div>
 
 	</div>

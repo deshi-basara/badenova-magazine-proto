@@ -138,7 +138,7 @@
             open: {
                 feed: false,
                 search: false,
-                map: false
+                map: true
             },
             openBoxName: null,
 

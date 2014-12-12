@@ -69,7 +69,7 @@
 
         angular.extend(ctrl, {
             articles: ArticlesService.getAllArticles(),
-            feedFilter: ['culture', 'family'],
+            feedFilter: ['culture', 'family', 'freetime', 'greenenergy', 'naturalgas', 'nature', 'news', 'saveenergy'],
             teaserArticle: ArticlesService.getTeaserArticle(),
 
             loadMore: loadMore
