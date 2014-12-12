@@ -16,6 +16,14 @@
         box-shadow: $frame-1;
         cursor: pointer;
 
+        opacity: 0;
+        @include transform(translate3d(0, 15%, 0));
+        @include transition(all 0.7s ease-in-out);
+        &.show {
+            opacity: 1;
+            @include transform(translate3d(0, 0, 0));
+        }
+
         .overview-item-category {
             position: absolute;
             top: 0;
@@ -83,6 +91,14 @@
             overflow: hidden;
             box-shadow: $frame-1;
             cursor: pointer;
+
+            opacity: 0;
+            @include transform(translate3d(0, 15%, 0));
+            @include transition(all 0.7s ease-in-out);
+            &.show {
+                opacity: 1;
+                @include transform(translate3d(0, 0, 0));
+            }
 
             .overview-item-category {
                 position: absolute;

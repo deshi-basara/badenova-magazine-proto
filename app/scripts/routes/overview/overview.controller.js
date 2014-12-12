@@ -6,39 +6,41 @@
         .module('app')
         .controller('OverviewCtrl', OverviewCtrl);
 
-    OverviewCtrl.$inject = ['$scope', 'FeedService', 'ArticlesService'];
+    OverviewCtrl.$inject = ['$scope', 'FeedService', 'ArticlesService', '$timeout'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function OverviewCtrl($scope, FeedService, ArticlesService) {
+    function OverviewCtrl($scope, FeedService, ArticlesService, $timeout) {
         var ctrl = this;
 
-        /**
-         * Initiates the feedFilter for filtering all articles accordingly to the selected
-         * feed items.
-         */
-        function initFeedFilter() {
-            // fetch all feed values and push all feed-categfory names to the filter-array
-            var allFeedValues = FeedService.getFeedItems();
-            var feedFilter = [];
-            for (var i = 0; i < allFeedValues.length; i++) {
-                feedFilter.push(allFeedValues[i].category);
-            };
-
-            ctrl.feedFilter = feedFilter;
-        }
-
-        /**
-         * [filterArticles description]
-         * @return {[type]} [description]
-         */
-        function filterArticles() {
-            return function(article) {
-                var isFiltered = ctrl.feedFilter.indexOf(article.category);
-                return isFiltered !== -1;
+            function addTrue(model) {
+                model.show = true;
+                console.log(model);
             }
+
+        /**
+         * Initiates the entering animation for all articles.
+         */
+        function initStartAnimation() {
+            // interval for fadding in the articles
+            var animationInterval = 500;
+
+            // start with the teaser-image
+            ctrl.teaserArticle.show = true;
+
+            // all other articles
+            var counter = 1;
+            angular.forEach(ctrl.articles, function(value, key) {
+                var execTime = animationInterval * counter++;
+
+                $timeout(function() {
+                    ctrl.articles[key].show = true;
+                }, execTime);
+
+            });
         }
+
 
         /**
          * Funktions-Beschreibung
@@ -70,7 +72,6 @@
             feedFilter: null,
             teaserArticle: ArticlesService.getTeaserArticle(),
 
-            filterArticles: filterArticles,
             loadMore: loadMore
         });
 
@@ -103,9 +104,7 @@
 
         //////////////////////
 
-        initFeedFilter();
-
-        console.log(ctrl.teaserArticle[0]);
+        initStartAnimation();
 
     }
 
