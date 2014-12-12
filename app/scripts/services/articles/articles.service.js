@@ -22,8 +22,7 @@
                             "category": "nature",
                             "categoryIcon": "../../images/feed/nature.png" ,
                             "date": "01.01.2014",
-                            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
-                            "content": ""
+                            "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
                         },
                         {
                             "id": 2,
@@ -32,8 +31,7 @@
                             "category": "culture",
                             "categoryIcon": "../../images/feed/culture.png" ,
                             "date": "01.01.2014",
-                            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
-                            "content": ""
+                            "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
                         },
                         {
                             "id": 3,
@@ -42,8 +40,7 @@
                             "category": "family",
                             "categoryIcon": "../../images/feed/family.png" ,
                             "date": "01.01.2014",
-                            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
-                            "content": ""
+                            "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
                         },
                         {
                             "id": 4,
@@ -52,8 +49,7 @@
                             "category": "freetime",
                             "categoryIcon": "../../images/feed/freetime.png" ,
                             "date": "01.01.2014",
-                            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
-                            "content": ""
+                            "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
                         },
                         {
                             "id": 5,
@@ -62,8 +58,7 @@
                             "category": "greenenergy",
                             "categoryIcon": "../../images/feed/greenenergy.png" ,
                             "date": "01.01.2014",
-                            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
-                            "content": ""
+                            "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
                         },
                         {
                             "id": 6,
@@ -72,8 +67,7 @@
                             "category": "naturalgas",
                             "categoryIcon": "../../images/feed/nature.png" ,
                             "date": "01.01.2014",
-                            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
-                            "content": ""
+                            "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
                         },
                         {
                             "id": 7,
@@ -82,8 +76,7 @@
                             "category": "news",
                             "categoryIcon": "../../images/feed/news.png" ,
                             "date": "01.01.2014",
-                            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
-                            "content": ""
+                            "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
                         },
                         {
                             "id": 8,
@@ -92,8 +85,7 @@
                             "category": "saveenergy",
                             "categoryIcon": "../../images/feed/saveenergy.png" ,
                             "date": "01.01.2014",
-                            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
-                            "content": ""
+                            "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
                         },
                         {
                             "id": 9,
@@ -102,12 +94,21 @@
                             "category": "nature",
                             "categoryIcon": "../../images/feed/nature.png" ,
                             "date": "01.01.2014",
-                            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
-                            "content": ""
+                            "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
                         }
             ],
+            teaserArticle: {
+                    "id": 0,
+                    "title": "Lorem ipsum dolor sit amet",
+                    "image": "image9.jpg",
+                    "category": "nature",
+                    "categoryIcon": "../../images/feed/nature.png" ,
+                    "date": "01.01.2014",
+                    "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.",
+            },
 
-            getAllArticles: getAllArticles
+            getAllArticles: getAllArticles,
+            getTeaserArticle: getTeaserArticle
         };
 
         return service;
@@ -117,10 +118,17 @@
 
 
         /**
-         * Fetches all feedItems from the localStorage
+         * Returns all articles.
          */
         function getAllArticles() {
             return service.allArticles;
+        }
+
+        /**
+         * Returns the teaser article.
+         */
+        function getTeaserArticle() {
+            return service.teaserArticle;
         }
 
     }
