@@ -214,6 +214,9 @@
 
     @include transition(background-color 0.7s ease-in-out);
     &:hover {
+        background-color: $bad-blue !important;
+    }
+    &.active:hover {
         background-color: $bad-grey !important;
     }
 }
@@ -229,6 +232,9 @@
 
     @include transition(background-color 0.7s ease-in-out);
     &:hover {
+        background-color: $bad-orange !important;
+    }
+    &.active:hover {
         background-color: $bad-grey !important;
     }
 }
@@ -244,6 +250,9 @@
 
     @include transition(background-color 0.7s ease-in-out);
     &:hover {
+        background-color: $bad-green !important;
+    }
+    &.active:hover {
         background-color: $bad-grey !important;
     }
 }
