@@ -1,0 +1,54 @@
+<div id="overview">
+
+    <!-- Teaser article -->
+    <div class="overview-teaser category-{{ ctrl.teaserArticle.category }}" ng-class="{ 'show': ctrl.teaserArticle.show }">
+
+        <!-- Category Indicator -->
+        <div class="overview-item-category">
+            <img ng-src="images/feed/{{ ctrl.teaserArticle.category }}.png">
+        </div>
+
+        <!-- Article Pic -->
+        <img ng-src="images/articles/{{ ctrl.teaserArticle.image }}">
+
+        <!-- Article Label -->
+        <div class="overview-item-label">
+            <div class="overview-item-content">
+                <h4>{{ ctrl.teaserArticle.title }}</h4>
+                <p>{{ ctrl.teaserArticle.content | characters: 320 }}</p>
+            </div>
+            <div class="overview-item-button">
+                <button class="button">Titelstory lesen</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- All articles -->
+    <div class="overview-items">
+
+        <div ng-repeat="article in ctrl.articles" class="overview-item category-{{ article.category }}" ng-class="{ 'show': article.show }">
+
+            <!-- Category Indicator -->
+            <div class="overview-item-category">
+                <img ng-src="images/feed/{{ article.category }}.png">
+            </div>
+
+            <!-- Article Pic -->
+            <img ng-src="images/articles/{{ article.image }}">
+
+            <!-- Article Label -->
+            <div class="overview-item-label">
+                <div class="overview-item-content">
+                    <h4>{{ article.title }}</h4>
+                    <p>{{ article.content | characters: 120 }}</p>
+                </div>
+                <div class="overview-item-button">
+                    <button class="button">Lesen</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

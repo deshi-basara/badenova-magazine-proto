@@ -16,7 +16,8 @@ angular
   'infinite-scroll',
   'ui.bootstrap',
   'LocalStorageModule',
-  'uiGmapgoogle-maps'
+  'uiGmapgoogle-maps',
+  'truncate'
 ])
 
 .constant('config', {
@@ -41,11 +42,12 @@ angular
       controllerAs: 'ctrl'
     })
 
-    .state('nav.overview', {
+    .state('nav.landing', {
       url: '/',
       templateUrl: 'scripts/routes/landing/landing.index.tpl.html',
       controller: 'LandingCtrl',
       controllerAs: 'ctrl'
+
     }
 
     )
@@ -53,11 +55,18 @@ angular
       url: '/article-detail',
       templateUrl: 'scripts/routes/article-detail/article.detail.index.tpl.html',
       controller: 'ArticleDetailCtrl',
+
+    })
+
+    .state('nav.overview', {
+      url: '/overview',
+      templateUrl: 'scripts/routes/overview/overview.index.tpl.html',
+      controller: 'OverviewCtrl',
       controllerAs: 'ctrl'
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/overview');
 
 
   /**
