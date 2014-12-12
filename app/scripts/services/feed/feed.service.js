@@ -15,17 +15,17 @@
 
         var service = {
             feedItems: [
-                {id: 1, img: 'culture.png', name: 'Kultur', color: 'feed-light-blue'},
-                {id: 2, img: 'family.png', name: 'Familie', color: 'feed-light-orange'},
-                {id: 3, img: 'freetime.png', name: 'Freizeit', color: 'feed-light-green'},
-                {id: 4, img: 'greenenergy.png', name: 'Ökostrom', color: 'feed-light-blue'},
-                {id: 5, img: 'naturalgas.png', name: 'Erdgas', color: 'feed-light-orange'},
-                {id: 6, img: 'nature.png', name: 'Natur', color: 'feed-light-green'},
-                {id: 7, img: 'news.png', name: 'Aktuelles', color: 'feed-light-blue'},
-                {id: 8, img: 'saveenergy.png', name: 'Energie sparen', color: 'feed-light-orange'}
+                {id: 0, category: 'culture', name: 'Kultur', color: 'feed-light-blue', active: true },
+                {id: 1, category: 'family', name: 'Familie', color: 'feed-light-orange', active: true},
+                {id: 2, category: 'freetime', name: 'Freizeit', color: 'feed-light-green', active: true},
+                {id: 3, category: 'greenenergy', name: 'Ökostrom', color: 'feed-light-blue', active: true},
+                {id: 4, category: 'naturalgas', name: 'Erdgas', color: 'feed-light-orange', active: true},
+                {id: 5, category: 'nature', name: 'Natur', color: 'feed-light-green', active: true},
+                {id: 6, category: 'news', name: 'Aktuelles', color: 'feed-light-blue', active: true},
+                {id: 7, category: 'saveenergy', name: 'Energie sparen', color: 'feed-light-orange', active: true}
             ],
 
-            getFeedValues: getFeedValues,
+            getFeedItems: getFeedItems,
             initFeed: initFeed
         };
 
@@ -67,10 +67,10 @@
         }
 
         /**
-         * Fetches all feedItems from the localStorage
+         * Returns all feedItems from the service-object.
          */
-        function getFeedValues() {
-            
+        function getFeedItems() {
+            return service.feedItems;
         }
 
     }
