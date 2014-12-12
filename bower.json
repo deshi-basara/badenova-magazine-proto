@@ -23,12 +23,12 @@
     "angular-animate": "~1.3.6",
     "angular-google-maps": "~2.0.11",
     "font-awesome": "~4.2.0",
-<<<<<<< HEAD
+
     "slick.js": "~1.3.15",
     "slick": "*"
-=======
+
     "angular-truncate": "*"
->>>>>>> 46fdaaff712efc63daf9adccbbd56c917b9c8bbf
+
   },
   "devDependencies": {
     "bourbon": "~4.0.2",
