@@ -6,12 +6,12 @@
         .module('app')
         .controller('OverviewCtrl', OverviewCtrl);
 
-    OverviewCtrl.$inject = ['$scope', 'FeedService', 'ArticlesService', '$timeout'];
+    OverviewCtrl.$inject = ['$scope', 'FeedService', 'ArticlesService', '$timeout', '$rootScope'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function OverviewCtrl($scope, FeedService, ArticlesService, $timeout) {
+    function OverviewCtrl($scope, FeedService, ArticlesService, $timeout, $rootScope) {
         var ctrl = this;
 
             function addTrue(model) {
@@ -69,6 +69,13 @@
             }
 
         }
+
+        $(".titelstory-button").click(function (){
+
+    $rootScope.article = ctrl.teaserArticle;
+
+
+   });
 
         //////////////////////
 
