@@ -61,18 +61,47 @@
                         position: relative;
                         margin-top: 10px;
                         margin-left: 125px;
-                        background-color: $bad-orange;
                         border-radius: 2px;
                         padding: 5px;
                         width: 30px;
 
-                        &:before, &:after {
-                            content: "";
-                            position: absolute;
-                            height: 5px;
-                            width: 105px;
-                            border-bottom: 1px solid $bad-orange;
-                            top: 10px;
+                        &.family, &.saveenergy, &.naturalgas {
+                            background-color: $bad-orange;
+
+                            &:before, &:after {
+                                content: "";
+                                position: absolute;
+                                height: 5px;
+                                width: 105px;
+                                border-bottom: 1px solid $bad-orange;
+                                top: 10px;
+                            }
+                        }
+
+                        &.culture, &.greenenergy, &.news {
+                            background-color: $bad-blue;
+
+                            &:before, &:after {
+                                content: "";
+                                position: absolute;
+                                height: 5px;
+                                width: 105px;
+                                border-bottom: 1px solid $bad-blue;
+                                top: 10px;
+                            }
+                        }
+
+                        &.freetime, &.nature {
+                            background-color: $bad-green;
+
+                            &:before, &:after {
+                                content: "";
+                                position: absolute;
+                                height: 5px;
+                                width: 105px;
+                                border-bottom: 1px solid $bad-green;
+                                top: 10px;
+                            }
                         }
 
                         &:before {

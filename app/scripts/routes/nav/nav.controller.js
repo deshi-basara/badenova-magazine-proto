@@ -6,12 +6,12 @@
         .module('app')
         .controller('NavCtrl', NavCtrl);
 
-    NavCtrl.$inject = ['FeedService', 'uiGmapGoogleMapApi', '$timeout', '$document', '$rootScope', '$scope'];
+    NavCtrl.$inject = ['FeedService', 'MapsService', 'uiGmapGoogleMapApi', '$timeout', '$document', '$rootScope', '$scope'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function NavCtrl(FeedService, uiGmapGoogleMapApi, $timeout, $document, $rootScope, $scope) {
+    function NavCtrl(FeedService, MapsService, uiGmapGoogleMapApi, $timeout, $document, $rootScope, $scope) {
         var ctrl = this;
         var scrollContainer = null;
 
@@ -77,10 +77,19 @@
         }
 
         /**
+         * Initializes all needed features and markers for the GoogleMaps side-box.
+         */
+        function initMaps() {
+
+        }
+
+        /**
          * Is called whenever a marker on the map is clicked.
          */
         function onMarkerClicked(marker) {
             console.log(marker);
+
+            $scope.$apply();
         }
 
         /**
@@ -182,168 +191,21 @@
         //openFeedModal();
 
         uiGmapGoogleMapApi.then(function(maps) {
-            var mapStyles = [
-                {
-                    "featureType": "road",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "stylers": [
-                        {
-                            "visibility": "simplified"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "stylers": [
-                        {
-                            "visibility": "simplified"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "stylers": [
-                        {
-                            "visibility": "simplified"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit",
-                    "stylers": [
-                        {
-                            "visibility": "simplified"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "landscape",
-                    "stylers": [
-                        {
-                            "visibility": "simplified"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.local",
-                    "stylers": [
-                        {
-                            "visibility": "on"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "visibility": "on"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.arterial",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "stylers": [
-                        {
-                            "color": "#5f94ff"
-                        },
-                        {
-                            "lightness": 26
-                        },
-                        {
-                            "gamma": 5.86
-                        }
-                    ]
-                },
-                {},
-                {
-                    "featureType": "road.highway",
-                    "stylers": [
-                        {
-                            "weight": 0.6
-                        },
-                        {
-                            "saturation": -85
-                        },
-                        {
-                            "lightness": 61
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road"
-                },
-                {},
-                {
-                    "featureType": "landscape",
-                    "stylers": [
-                        {
-                            "hue": "#0066ff"
-                        },
-                        {
-                            "saturation": 74
-                        },
-                        {
-                            "lightness": 100
-                        }
-                    ]
-                }
-            ];
 
             // start in freiburg
-            /*ctrl.map = {
-                center: {
-                    latitude: 47.9873111,
-                    longitude: 7.79642
-                },
-                zoom: 12,
-                options: {
-                    disableDefaultUI: true,
-                    styles: mapStyles
-                }
-            };
+            ctrl.map = MapsService.getMapData();
 
             // markers
-            ctrl.mapMarkers = [
-                {id: 1, coords: {latitude: 47.9873111, longitude: 7.79642}, content: {
-                    category: 'family',
-                    title: 'Marker Test 1',
-                    teaserText: 'Lorem'
-                }, options: {
-                    boxClass: 'custom-marker-window'
-                },
-                show: false}
-            ];
+            ctrl.mapMarkers = MapsService.getMapMarkers();
+
+            console.log(ctrl.mapMarkers);
 
             // add the marker click events to each marker
             angular.forEach(ctrl.mapMarkers, function(marker) {
                 marker.onClicked = function() {
                     onMarkerClicked(marker);
                 };
-            });*/
+            });
         });
 
     }
