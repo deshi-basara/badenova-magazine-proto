@@ -78,18 +78,18 @@
 		<ui-gmap-google-map class="map-canvas" center='ctrl.map.center' zoom='ctrl.map.zoom' options="ctrl.map.options">
 
 			<!-- Markers -->
-			<ui-gmap-markers models="ctrl.mapMarkers" coords="'coords'" click="'onClicked'">
+			<ui-gmap-markers models="ctrl.mapMarkers" coords="'coords'" click="'onClicked'" icon="'icon'">
 
 				<!-- Marker Windows -->
 				<ui-gmap-windows show="'show'" options="'options'">
 	                <div class="custom-overlay">
 						<div class="overlay-date">24.12.2014</div>
-						<div class="overlay-category">
-							<img ng-src="images/feed/culture.png" alt="">
+						<div class="overlay-category {{ content.category }}" ng-non-bindable>
+							<img src="images/feed/{{ content.category }}.png" alt="{{ content.category }}" ng-non-bindable>
 						</div>
 
-						<h5 class="headline">Overlay Title</h5>
-	                    <p class="overlay-teaser">My marker will stay open when the window is popped up!</p>
+						<h5 class="headline" ng-non-bindable>{{ content.title }}</h5>
+	                    <p class="overlay-teaser" ng-non-bindable>{{ content.teaserText }}</p>
 	                </div>
             	</ui-gmap-windows>
 
