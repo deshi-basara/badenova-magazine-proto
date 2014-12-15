@@ -14,6 +14,7 @@
     function NavCtrl(FeedService, MapsService, uiGmapGoogleMapApi, $timeout, $document, $rootScope, $scope) {
         var ctrl = this;
         var scrollContainer = null;
+        var mapInit = false;
 
         /**
          * Debounced function, that checks the scroll position every 700ms and
@@ -80,7 +81,24 @@
          * Initializes all needed features and markers for the GoogleMaps side-box.
          */
         function initMaps() {
+            // only initiate the map once
+            if(!mapInit) {
 
+                // start in freiburg
+                ctrl.map = MapsService.getMapData();
+
+                // markers
+                ctrl.mapMarkers = MapsService.getMapMarkers();
+
+                // add the marker click events to each marker
+                angular.forEach(ctrl.mapMarkers, function(marker) {
+                    marker.onClicked = function() {
+                        onMarkerClicked(marker);
+                    };
+                });
+
+                mapInit = true;
+            }
         }
 
         /**
@@ -88,8 +106,6 @@
          */
         function onMarkerClicked(marker) {
             console.log(marker);
-
-            $scope.$apply();
         }
 
         /**
@@ -97,6 +113,11 @@
          * @param  {string} boxName [Name of the box we want to toggle]
          */
         function toggleBox(boxName) {
+            // if map is called, try to initiate the map once
+            if(boxName === 'map') {
+                initMaps();
+            }
+
             // if the user wants to close the current box by clicking the navigation item
             if(ctrl.openBoxName === boxName) {
                 return ctrl.open[ctrl.openBoxName] = false;
@@ -175,7 +196,6 @@
              */
             scrollContainer = angular.element(document.getElementsByClassName('nested-container'));
             scrollContainer.on('scroll', checkScrollPosition);
-            console.log(scrollContainer);
 
             /**
              * Hide the loader, when dom is ready
@@ -189,24 +209,6 @@
         //////////////////////
 
         //openFeedModal();
-
-        uiGmapGoogleMapApi.then(function(maps) {
-
-            // start in freiburg
-            ctrl.map = MapsService.getMapData();
-
-            // markers
-            ctrl.mapMarkers = MapsService.getMapMarkers();
-
-            console.log(ctrl.mapMarkers);
-
-            // add the marker click events to each marker
-            angular.forEach(ctrl.mapMarkers, function(marker) {
-                marker.onClicked = function() {
-                    onMarkerClicked(marker);
-                };
-            });
-        });
 
     }
 
