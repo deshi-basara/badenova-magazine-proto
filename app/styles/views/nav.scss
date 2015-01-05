@@ -22,6 +22,16 @@
         }
     }
 
+    @include media($mobile) {
+        width: 80px;
+        flex: 0 0 80px;
+
+        .nav-logo {
+            margin-left: -15px;
+            @include transform(scale(0.8));
+        }
+    }
+
     &:hover {
         width: 200px;
         flex: 0 0 200px;

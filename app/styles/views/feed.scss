@@ -10,6 +10,11 @@
 
     z-index: 3;
 
+    @include media($mobile) {
+        width: 80px;
+        flex: 0 0 80px;
+    }
+
     &:hover {
         .feed-items .feed-item i {
             opacity: 1;
@@ -28,6 +33,11 @@
             margin-left: 10px;
             margin-top: 10px;
             text-align: center;
+
+            @include media($mobile) {
+                width: 60px;
+                height: 60px;
+            }
 
             background-color: $bad-grey;
             border-radius: 2px;

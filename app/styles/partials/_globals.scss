@@ -14,6 +14,12 @@ $bad-light-white: #ededed;
 $bad-black: #6f6f6f;
 $bad-grey: #acacac;
 
+/**
+ * Breakpoints
+ */
+$max-width: 1240px;
+$mobile: new-breakpoint(max-width 620px 4);
+
 
 /**
  * Fonts
@@ -74,3 +80,12 @@ html, body {
  */
 $frame-1: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 $frame-2: 0px 8px 17px rgba(0, 0, 0, 0.2);
+
+/**
+ * Omega-reset mixing.
+ * http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat/
+ */
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}

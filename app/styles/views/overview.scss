@@ -12,6 +12,10 @@
         box-shadow: $frame-1;
         cursor: pointer;
 
+        @include media($mobile) {
+            height: 45vh;
+        }
+
         opacity: 0;
         @include transform(translate3d(0, 15%, 0));
         @include transition(all 0.7s ease-in-out);
@@ -72,6 +76,10 @@
                     @include transition(all 0.7s ease-in-out);
                 }
             }
+
+            @include media($mobile) {
+                height: 25vh;
+            }
         }
     }
 
@@ -90,6 +98,13 @@
             overflow: hidden;
             box-shadow: $frame-1;
             cursor: pointer;
+
+            @include media($mobile) {
+                @include omega-reset(3n);
+                @include span-columns(4 of 4);
+                @include omega(1n);
+                height: 30vh;
+            }
 
             opacity: 0;
             @include transform(translate3d(0, 15%, 0));
@@ -167,6 +182,12 @@
             background-color: $bad-blue;
         }
     }
+
+    @include media($mobile) {
+        button {
+            background-color: $bad-blue;
+        }
+    }
 }
 .category-family {
     .overview-item-category {
@@ -174,6 +195,12 @@
     }
 
     &:hover {
+        button {
+            background-color: $bad-orange;
+        }
+    }
+
+    @include media($mobile) {
         button {
             background-color: $bad-orange;
         }
@@ -189,6 +216,12 @@
             background-color: $bad-green;
         }
     }
+
+    @include media($mobile) {
+        button {
+            background-color: $bad-green;
+        }
+    }
 }
 .category-greenenergy {
     .overview-item-category {
@@ -196,6 +229,12 @@
     }
 
     &:hover {
+        button {
+            background-color: $bad-blue;
+        }
+    }
+
+    @include media($mobile) {
         button {
             background-color: $bad-blue;
         }
@@ -211,6 +250,12 @@
             background-color: $bad-orange;
         }
     }
+
+    @include media($mobile) {
+        button {
+            background-color: $bad-orange;
+        }
+    }
 }
 .category-nature {
     .overview-item-category {
@@ -218,6 +263,12 @@
     }
 
     &:hover {
+        button {
+            background-color: $bad-green;
+        }
+    }
+
+    @include media($mobile) {
         button {
             background-color: $bad-green;
         }
@@ -233,6 +284,12 @@
             background-color: $bad-blue;
         }
     }
+
+    @include media($mobile) {
+        button {
+            background-color: $bad-blue;
+        }
+    }
 }
 .category-saveenergy {
     .overview-item-category {
@@ -240,6 +297,12 @@
     }
 
     &:hover {
+        button {
+            background-color: $bad-orange;
+        }
+    }
+
+    @include media($mobile) {
         button {
             background-color: $bad-orange;
         }
