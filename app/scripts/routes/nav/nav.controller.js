@@ -116,6 +116,15 @@
         }
 
         /**
+         * Initiates a fake search inside the articles-array.
+         * Manipulates the result-array which has a ng-repeat binding.
+         * @return {[type]} [description]
+         */
+        function startSearch() {
+
+        }
+
+        /**
          * Toggles the left boxes identified by their name-
          * @param  {string} boxName [Name of the box we want to toggle]
          */
@@ -189,8 +198,11 @@
                 map: false
             },
             openBoxName: null,
+            searchString: '',
+            searchResults: [],
 
             exportPdf: exportPdf,
+            startSearch: startSearch,
             toggleBox: toggleBox,
             toggleFeed: toggleFeed,
             toggleFeedCategory: toggleFeedCategory

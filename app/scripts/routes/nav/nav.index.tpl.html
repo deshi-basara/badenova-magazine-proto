@@ -55,16 +55,32 @@
 
 	<!-- Search-Input -->
 	<div class="search-input">
-		<input type="text" ng-model="ctrl.searchString" placeholder="Suchen ...">
+		<input type="text" ng-model="ctrl.searchString" ng-keyup="ctrl.startSearch()" ng-class="{ 'results': ctrl.searchString }"placeholder="Suchen ...">
 	</div>
 
 	<div class="search-box-content">
 
 		<!-- Search-Results -->
-		<div class="search-results">
-			<div class="search-item">dwadwa</div>
+		<div class="search-results" ng-hide="!ctrl.searchString">
+			<div class="search-item">
+				<h4 class="headline">Moraine lake - Artikel</h4>
+				<div class="url">https://dribbble.com/shots/1790652-Google-Material-exploration/attachments/294056</div>
+				<p>Here is a little week end exploration of how Google could look like with the material design. I will add the animations next week. Just a concept. Btw, It's not a fixed footer, the footer is at the bottom of all the results of the page, (I just included it so you can see it).
+				</p>
+			</div>
+			<div class="search-item">
+				<h4 class="headline">Moraine lake - Artikel</h4>
+				<div class="url">https://dribbble.com/shots/1790652-Google-Material-exploration/attachments/294056</div>
+				<p>Here is a little week end exploration of how Google could look like with the material design. I will add the animations next week. Just a concept. Btw, It's not a fixed footer, the footer is at the bottom of all the results of the page, (I just included it so you can see it).
+				</p>
+			</div>
+			<div class="search-item">
+				<h4 class="headline">Moraine lake - Artikel</h4>
+				<div class="url">https://dribbble.com/shots/1790652-Google-Material-exploration/attachments/294056</div>
+				<p>Here is a little week end exploration of how Google could look like with the material design. I will add the animations next week. Just a concept. Btw, It's not a fixed footer, the footer is at the bottom of all the results of the page, (I just included it so you can see it).
+				</p>
+			</div>
 		</div>
-
 	</div>
 </div>
 

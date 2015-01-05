@@ -49,3 +49,25 @@ $bad-ease-in-out: cubic-bezier(0.68, -0.55, 0.265, 1.25);
     opacity: 1;
     @include transform(translate3d(0, 0, 0));
 }
+
+/**
+ * Search
+ */
+.search-box-content .ng-hide-add {
+    opacity: 1;
+    @include transform(translate3d(0, 0, 0));
+    @include transition(all 0.7s ease-in-out);
+}
+.search-box-content .ng-hide-add-active {
+    opacity: 0;
+    @include transform(translate3d(0, 40px, 0));
+}
+.search-box-content .ng-hide-remove {
+    opacity: 0;
+    @include transform(translate3d(0, 40px, 0));
+    @include transition(all 0.7s ease-in-out 0.6s);
+}
+.search-box-content .ng-hide-remove-active {
+    opacity: 1;
+    @include transform(translate3d(0, 0, 0));
+}
