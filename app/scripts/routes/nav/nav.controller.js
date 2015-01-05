@@ -192,6 +192,7 @@
             exportLoading: false,
             feedItems: FeedService.getFeedItems(),
             gpsLoading: true,
+            isMobile: $window.matchMedia('(max-width: 620px)').matches,
             navDocked: false,
             open: {
                 feed: false,
