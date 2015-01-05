@@ -6,12 +6,12 @@
         .module('app')
         .controller('NavCtrl', NavCtrl);
 
-    NavCtrl.$inject = ['FeedService', 'MapsService', 'uiGmapGoogleMapApi', '$timeout', '$document', '$rootScope', '$scope'];
+    NavCtrl.$inject = ['FeedService', 'ArticlesService', 'MapsService', 'uiGmapGoogleMapApi', '$timeout', '$document', '$rootScope', '$scope'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function NavCtrl(FeedService, MapsService, uiGmapGoogleMapApi, $timeout, $document, $rootScope, $scope) {
+    function NavCtrl(FeedService, ArticlesService, MapsService, uiGmapGoogleMapApi, $timeout, $document, $rootScope, $scope) {
         var ctrl = this;
         var scrollContainer = null;
         var mapInit = false;
@@ -28,6 +28,8 @@
             else {
                 ctrl.navDocked = false;
             }
+
+            console.log(ctrl.navDocked);
 
             // if the user reached the container end, start infinite loading
             var containerHeight = (scrollContainer[0].scrollHeight/2);
@@ -98,6 +100,11 @@
                 });
 
                 mapInit = true;
+
+                // start fake gps connection
+                $timeout(function() {
+                    ctrl.gpsLoading = false;
+                }, 4000);
             }
         }
 
@@ -171,8 +178,10 @@
         //////////////////////
 
         angular.extend(ctrl, {
+            articles: ArticlesService.getAllArticles(),
             exportLoading: false,
             feedItems: FeedService.getFeedItems(),
+            gpsLoading: true,
             navDocked: false,
             open: {
                 feed: false,

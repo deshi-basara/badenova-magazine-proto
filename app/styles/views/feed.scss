@@ -145,6 +145,12 @@
         padding-right: 100px;
         padding-left: 200px;
 
+        @include media($mobile) {
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 0.7em;
+        }
+
         .feed-box-items {
             width: 60%;
             margin-left: 20%;
@@ -178,15 +184,15 @@
                     right: 0;
                 }
 
-                    img {
-                        position: absolute;
-                        top: 20%;
-                        left: 25%;
-                        width: 50%;
-                        height: auto;
+                img {
+                    position: absolute;
+                    top: 20%;
+                    left: 25%;
+                    width: 50%;
+                    height: auto;
 
-                        -webkit-filter: invert(100%);
-                    }
+                    -webkit-filter: invert(100%);
+                }
 
                 .feed-box-label {
                     margin-bottom: 15px;

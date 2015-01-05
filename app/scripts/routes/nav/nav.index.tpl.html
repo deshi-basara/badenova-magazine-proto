@@ -98,16 +98,20 @@
 		</ui-gmap-google-map>
 
 		<!-- Nearby list -->
-		<div class="map-nearby">
+		<div class="map-nearby" ng-animate-children>
 			<h4>Badenova in deiner Nähe</h4>
-			<div class="map-nearby-items">
-				<div class="map-nearby-item" "ng-repeat="article in ctrl.articles"">
-					<div class="map-nearby-category">
-						<img ng-src="images/feed/culture.png" alt="">
+			<div class="map-nearby-items" ng-hide="ctrl.gpsLoading">
+				<div class="map-nearby-item" ng-repeat="article in ctrl.articles">
+					<div class="category-{{:: article.category }} map-nearby-category">
+						<img ng-src="images/feed/{{:: article.category }}.png" alt="{{:: article.category }}">
 					</div>
-					<span class="headline">'{{ article.name }}'</span>
-					<span class="distance">10 km</span>
+					<span class="headline">{{:: article.title | characters: 20 }}</span>
+					<span class="distance">{{:: $index * 5 }} km</span>
 				</div>
+			</div>
+			<div class="map-nearby-gps" ng-hide="!ctrl.gpsLoading">
+				<div class="spinner"></div>
+				<h5>Standort wird ermittelt ...</h5>
 			</div>
 		</div>
 

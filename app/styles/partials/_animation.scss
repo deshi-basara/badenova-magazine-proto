@@ -29,3 +29,23 @@ $bad-ease-in-out: cubic-bezier(0.68, -0.55, 0.265, 1.25);
     opacity: 0 !important;
     @include transform(translate3d(0,15%,0) !important);
 }
+
+/**
+ * Map
+ */
+.map-nearby .ng-hide-add {
+    opacity: 1;
+    @include transition(all 0.7s ease-in-out);
+}
+.map-nearby .ng-hide-add-active {
+    opacity: 0;
+}
+.map-nearby .ng-hide-remove {
+    opacity: 0;
+    @include transform(translate3d(0, 40px, 0));
+    @include transition(all 0.7s ease-in-out 0.6s);
+}
+.map-nearby .ng-hide-remove-active {
+    opacity: 1;
+    @include transform(translate3d(0, 0, 0));
+}

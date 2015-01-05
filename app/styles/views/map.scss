@@ -140,6 +140,25 @@
                 margin-top: 14px;
             }
 
+            .map-nearby-gps {
+
+                position: absolute;
+                width: 100%;
+                top: 45%;
+
+                .spinner {
+                  width: 40px;
+                  height: 40px;
+                  margin: 20px auto;
+                  background-color: #333;
+
+                  border-radius: 100%;  
+                  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+                  animation: scaleout 1.0s infinite ease-in-out;
+                }
+
+            }
+
             .map-nearby-items {
                 position: relative;
                 top: 15px;
@@ -155,20 +174,22 @@
                     cursor: pointer;
                     margin-bottom: 5px;
 
+                    &:hover {
+                        box-shadow: $frame-2;
+                    }
+
                     .map-nearby-category {
                         @include span-columns(2 of 12);
                         height: 100%;
 
                         img {
                             margin-top: 5px;
-                            margin-left: 5px;
+                            margin-left: 9px;
                             display: block;
                             width: 30px;
                             padding: 3px;
                             height: auto;
                             border-radius: 1px;
-
-                            background-color: $bad-orange;
 
                             -webkit-filter: invert(100%);
                         }
@@ -198,5 +219,15 @@
         opacity: 1;
         background-color: $bad-white;
         @include transform(translate3d(0,-180px,0) scale(1));
+    }
+}
+
+@keyframes scaleout {
+    0% {
+        transform: scale(0.0);
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 0;
     }
 }
