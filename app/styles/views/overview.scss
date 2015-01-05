@@ -173,7 +173,7 @@
 
 
 .category-culture {
-    .overview-item-category {
+    .overview-item-category, &.map-nearby-category {
         background-color: $bad-blue;
     }
 
@@ -190,7 +190,7 @@
     }
 }
 .category-family {
-    .overview-item-category {
+    .overview-item-category, &.map-nearby-category {
         background-color: $bad-orange;
     }
 
@@ -207,7 +207,7 @@
     }
 }
 .category-freetime {
-    .overview-item-category {
+    .overview-item-category, &.map-nearby-category {
         background-color: $bad-green;
     }
 
@@ -224,7 +224,7 @@
     }
 }
 .category-greenenergy {
-    .overview-item-category {
+    .overview-item-category, &.map-nearby-category {
         background-color: $bad-blue;
     }
 
@@ -241,7 +241,7 @@
     }
 }
 .category-naturalgas {
-    .overview-item-category {
+    .overview-item-category, &.map-nearby-category {
         background-color: $bad-orange;
     }
 
@@ -258,7 +258,7 @@
     }
 }
 .category-nature {
-    .overview-item-category {
+    .overview-item-category, &.map-nearby-category {
         background-color: $bad-green;
     }
 
@@ -275,7 +275,7 @@
     }
 }
 .category-news {
-    .overview-item-category {
+    .overview-item-category, &.map-nearby-category {
         background-color: $bad-blue;
     }
 
@@ -292,7 +292,7 @@
     }
 }
 .category-saveenergy {
-    .overview-item-category {
+    .overview-item-category, &.map-nearby-category {
         background-color: $bad-orange;
     }
 
