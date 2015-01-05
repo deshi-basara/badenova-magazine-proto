@@ -6,12 +6,14 @@
         .module('app')
         .controller('NavCtrl', NavCtrl);
 
-    NavCtrl.$inject = ['FeedService', 'ArticlesService', 'MapsService', 'uiGmapGoogleMapApi', '$timeout', '$document', '$rootScope', '$scope'];
+    NavCtrl.$inject = ['FeedService', 'ArticlesService', 'MapsService', 'uiGmapGoogleMapApi', '$timeout',
+                        '$document', '$rootScope', '$scope', '$window'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function NavCtrl(FeedService, ArticlesService, MapsService, uiGmapGoogleMapApi, $timeout, $document, $rootScope, $scope) {
+    function NavCtrl(FeedService, ArticlesService, MapsService, uiGmapGoogleMapApi, $timeout,
+                        $document, $rootScope, $scope, $window) {
         var ctrl = this;
         var scrollContainer = null;
         var mapInit = false;
@@ -29,19 +31,18 @@
                 ctrl.navDocked = false;
             }
 
-            console.log(ctrl.navDocked);
+            $scope.$apply();
 
             // if the user reached the container end, start infinite loading
-            var containerHeight = (scrollContainer[0].scrollHeight/2);
+            /*var containerHeight = (scrollContainer[0].scrollHeight/2);
             var containerDistance = (scrollContainer[0].scrollHeight - scrollContainer[0].scrollTop);
             console.log(containerHeight + ' >= ' + containerDistance);
             if(containerHeight >= containerDistance) {
                 // start lazy loading
                 $rootScope.$broadcast('load.more');
-            }
+            }*/
 
-            $scope.$apply();
-        }, 1000);
+        }, 500);
 
         /**
          * Debouncing function.
@@ -213,16 +214,18 @@
         angular.element(document).ready(function() {
 
             /**
-             * Watches the scroll position of the container (debounced).
-             */
-            scrollContainer = angular.element(document.getElementsByClassName('nested-container'));
-            scrollContainer.on('scroll', checkScrollPosition);
-
-            /**
              * Hide the loader, when dom is ready
              */
             $timeout(function() {
                 ctrl.preloaderHide = true;
+
+                /**
+                 * Watches the scroll position of the container (debounced).
+                 */
+                scrollContainer = angular.element(document.getElementsByClassName('nested-container'));
+                scrollContainer.bind('scroll', function() {
+                    checkScrollPosition();
+                });
             }, 1000);
 
         });
