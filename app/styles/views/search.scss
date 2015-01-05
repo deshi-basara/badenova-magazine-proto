@@ -43,6 +43,18 @@
                 margin-top: -40%;
                 outline: 0;
             }
+
+            @include media($mobile) {
+                &:focus {
+                    margin-top: -350px;
+                    outline: 0;
+                }
+
+                &.results {
+                    margin-top: -350px;
+                    outline: 0;
+                }
+            }
         }
     }
 
@@ -53,10 +65,20 @@
         padding-right: 100px;
         padding-left: 200px;
 
+        @include media($mobile) {
+            padding-right: 105px;
+            padding-left: 10px;
+            font-size: 0.7em;
+        }
+
         .search-results {
             width: 60%;
             height: 600px;
             margin-left: 20%;
+
+            @include media($mobile) {
+                width: 80%;
+            }
 
             .search-item {
                 position: relative;
