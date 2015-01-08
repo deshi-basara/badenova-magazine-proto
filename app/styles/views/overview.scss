@@ -12,7 +12,7 @@
         box-shadow: $frame-1;
         cursor: pointer;
 
-        @include media($mobile) {
+        @include media($tablet) {
             height: 45vh;
         }
 
@@ -59,7 +59,7 @@
                 @include span-columns(9 of 12);
                 padding: 10px;
 
-                @include media($mobile) {
+                @include media($tablet) {
                     @include span-columns(4 of 4);
                 }
 
@@ -81,7 +81,7 @@
                 }
             }
 
-            @include media($mobile) {
+            @include media($tablet) {
                 height: 20vh;
             }
         }
@@ -103,7 +103,7 @@
             box-shadow: $frame-1;
             cursor: pointer;
 
-            @include media($mobile) {
+            @include media($tablet) {
                 @include omega-reset(3n);
                 @include span-columns(4 of 4);
                 @include omega(1n);
@@ -149,7 +149,7 @@
 
                 background-color: $bad-white;
 
-                @include media($mobile) {
+                @include media($tablet) {
                     height: 14vh;
                 }
 
@@ -191,7 +191,7 @@
         }
     }
 
-    @include media($mobile) {
+    @include media($tablet) {
         button {
             background-color: $bad-blue;
         }
@@ -208,7 +208,7 @@
         }
     }
 
-    @include media($mobile) {
+    @include media($tablet) {
         button {
             background-color: $bad-orange;
         }
@@ -225,7 +225,7 @@
         }
     }
 
-    @include media($mobile) {
+    @include media($tablet) {
         button {
             background-color: $bad-green;
         }
@@ -242,7 +242,7 @@
         }
     }
 
-    @include media($mobile) {
+    @include media($tablet) {
         button {
             background-color: $bad-blue;
         }
@@ -259,7 +259,7 @@
         }
     }
 
-    @include media($mobile) {
+    @include media($tablet) {
         button {
             background-color: $bad-orange;
         }
@@ -276,7 +276,7 @@
         }
     }
 
-    @include media($mobile) {
+    @include media($tablet) {
         button {
             background-color: $bad-green;
         }
@@ -293,7 +293,7 @@
         }
     }
 
-    @include media($mobile) {
+    @include media($tablet) {
         button {
             background-color: $bad-blue;
         }
@@ -310,7 +310,7 @@
         }
     }
 
-    @include media($mobile) {
+    @include media($tablet) {
         button {
             background-color: $bad-orange;
         }
