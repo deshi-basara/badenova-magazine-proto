@@ -149,6 +149,7 @@
 		<div ng-repeat="item in ctrl.feedItems | filter: {active: true} " class="feed-item list" ng-class="item.color">
 			<i class="ion-ios-close" ng-click="ctrl.toggleFeedCategory(item.id)"></i>
 			<img src="images/feed/{{ item.category }}.png">
+			<div class="feed-item-label active" ng-class="item.color">{{ item.name }}</div>
 		</div>
 	</div>
 
