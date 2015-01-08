@@ -18,8 +18,8 @@ $bad-grey: #acacac;
  * Breakpoints
  */
 $max-width: 1240px;
-$mobile: new-breakpoint(max-width 620px 4);
-
+$mobile: new-breakpoint(max-width 620px 4); // 620x920
+$tablet: new-breakpoint(max-width 1024px 4); // 1024x768
 
 /**
  * Fonts

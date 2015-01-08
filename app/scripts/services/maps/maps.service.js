@@ -162,9 +162,9 @@
                         longitude: 7.79642
                     },
                     content: {
-                        category: 'family',
-                        title: 'Marker Test 1',
-                        teaserText: 'Lorem'
+                        category: 'saveenergy',
+                        title: 'My Smart Home is my Castle',
+                        teaserText: "Ob Licht, TV oder Heizung – wer träumt nicht davon, den Haushalt per Smartphone zu steuern und dabei auch noch Energie zu sparen? Wie der Alltag im Smart Home aussehen könnte, zeigt unsere fiktive Familie Peschke. Hereinspaziert! Tschüss, Energieverschwendung, hallo, Smart Home! Durch die Vernetzung von Haushaltsgeräten hilft das intelligente Haus seinen Bewohnern, Energie zu sparen. Einiges davon ist noch Zukunftsmusik. Einzelne Lösungen wie die Heizungs-App von tado° gibt es aber schon jetzt. So sparen Sie Energie und bis zu 31 % Heizkosten. Um es mit den Worten von Markus Peschke zu sagen:                 „Endlich jemand, der mitdenkt!“"
                     },
                     icon: 'images/map/marker-bad-orange.png',
                     options: {
@@ -180,8 +180,8 @@
                     },
                     content: {
                         category: 'freetime',
-                        title: 'Marker Test 2',
-                        teaserText: 'Lorem'
+                        title: 'Die Region erleben',
+                        teaserText: 'Bereits zum fünften Mal in Folge wurde die badenova von einem unabhängigen Online-Energieverbraucherportal als TOP-Lokalversorger ausgezeichnet. Ohne die '
                     },
                     icon: 'images/map/marker-bad-green.png',
                     options: {
@@ -197,8 +197,8 @@
                     },
                     content: {
                         category: 'culture',
-                        title: 'Marker Test 3',
-                        teaserText: 'Lorem'
+                        title: 'Urlaub mit Klimawert',
+                        teaserText: 'Ob Hotel oder Hütte: Immer mehr Menschen entscheiden sich für umweltbewusste Gastgeber. Beispielhaftes Engagement von Gastronomen und Hoteliers gibt es vor allem im Südwesten. Etliche Initiativen und auch die EnBW unterstützen sie dabei. Im Urlaub'
                     },
                     icon: 'images/map/marker-bad-blue.png',
                     options: {

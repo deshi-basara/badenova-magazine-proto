@@ -2,7 +2,9 @@
 <nav id="nav" ng-class="{ 'docked': ctrl.navDocked || ctrl.isMobile }">
 	<!-- Nav logo -->
 	<div class="nav-logo">
-		<h3>meine energie</h3>
+		<a href="#/overview">
+			<h3>meine energie</h3>
+		</a>
 	</div>
 
 	<!-- Nav items -->
@@ -53,6 +55,9 @@
 <!-- Search-Box -->
 <div id="search-box" ng-class="{ 'open': ctrl.open.search }">
 
+	<!-- close icon -->
+	<i class="ion-chevron-left close-icon" ng-click="ctrl.toggleBox('search')"></i>
+
 	<!-- Search-Input -->
 	<div class="search-input">
 		<input type="text" ng-model="ctrl.searchString" ng-keyup="ctrl.startSearch()" ng-class="{ 'results': ctrl.searchString }"placeholder="Suchen ...">
@@ -88,6 +93,9 @@
 <!-- Map-Box -->
 <div id="map-box" ng-class="{ 'open': ctrl.open.map }">
 
+	<!-- close icon -->
+	<i class="ion-chevron-left close-icon" ng-click="ctrl.toggleBox('map')"></i>
+
 	<div class="map-box-content">
 
 		<!-- GoogleMaps -->
@@ -105,7 +113,7 @@
 						</div>
 
 						<h5 class="headline" ng-non-bindable>{{ content.title }}</h5>
-	                    <p class="overlay-teaser" ng-non-bindable>{{ content.teaserText }}</p>
+	                    <p class="overlay-teaser" ng-non-bindable>{{ content.teaserText | characters: 50 }}</p>
 	                </div>
             	</ui-gmap-windows>
 
@@ -115,7 +123,8 @@
 
 		<!-- Nearby list -->
 		<div class="map-nearby" ng-animate-children>
-			<h4>Badenova in deiner Nähe</h4>
+
+			<h4>badenova in deiner Nähe</h4>
 			<div class="map-nearby-items" ng-hide="ctrl.gpsLoading">
 				<div class="map-nearby-item" ng-repeat="article in ctrl.articles">
 					<div class="category-{{:: article.category }} map-nearby-category">
@@ -130,7 +139,6 @@
 				<h5>Standort wird ermittelt ...</h5>
 			</div>
 		</div>
-
 	</div>
 
 </div>
@@ -138,6 +146,9 @@
 
 <!-- Feedbar -->
 <div id="feed">
+
+	<!-- close icon --
+	<i class="ion-chevron-left close-icon" ng-click="ctrl.toggleBox('feed')"></i>-->
 
 	<!-- Add Feed -->
 	<div class="feed-add">
@@ -149,6 +160,7 @@
 		<div ng-repeat="item in ctrl.feedItems | filter: {active: true} " class="feed-item list" ng-class="item.color">
 			<i class="ion-ios-close" ng-click="ctrl.toggleFeedCategory(item.id)"></i>
 			<img src="images/feed/{{ item.category }}.png">
+			<div class="feed-item-label active" ng-class="item.color">{{ item.name }}</div>
 		</div>
 	</div>
 

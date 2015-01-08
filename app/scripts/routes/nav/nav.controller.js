@@ -137,7 +137,10 @@
 
             // if the user wants to close the current box by clicking the navigation item
             if(ctrl.openBoxName === boxName) {
-                return ctrl.open[ctrl.openBoxName] = false;
+                ctrl.open[ctrl.openBoxName] = false
+                ctrl.openBoxName = null;
+
+                return;
             }
             // close the current box, if open
             if(ctrl.openBoxName) {

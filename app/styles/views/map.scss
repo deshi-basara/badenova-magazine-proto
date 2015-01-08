@@ -26,6 +26,11 @@
             padding-left: 10px;
             font-size: 0.7em;
         }
+        @include media($tablet) {
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 0.7em;
+        }
 
         .map-canvas {
             position: relative;
@@ -34,6 +39,9 @@
             @include span-columns(9 of 12, $display: block-collapse);
 
             @include media($mobile) {
+                @include span-columns(4 of 4, $display: block-collapse);
+            }
+            @include media($tablet) {
                 @include span-columns(4 of 4, $display: block-collapse);
             }
 
@@ -74,6 +82,10 @@
                         border-radius: 2px;
                         padding: 5px;
                         width: 30px;
+
+                        h5 {
+                            cursor: pointer;
+                        }
 
                         &.family, &.saveenergy, &.naturalgas {
                             background-color: $bad-orange;
@@ -157,6 +169,17 @@
                 padding-left: 100px;
                 padding-right: 100px;
             }
+            @include media($tablet) {
+                position: fixed;
+                bottom: 0;
+                height: 37%;
+                width: 100%;
+                overflow-y: scroll;
+                overflow-x: hidden;
+
+                padding-left: 100px;
+                padding-right: 100px;
+            }
 
             h4 {
                 margin-top: 14px;
@@ -169,6 +192,9 @@
                 top: 45%;
 
                 @include media($mobile) {
+                    left: 0;
+                }
+                @include media($tablet) {
                     left: 0;
                 }
 
