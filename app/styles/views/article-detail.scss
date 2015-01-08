@@ -57,7 +57,7 @@
 		.author{
 
 			position: absolute;
-			top: 20px;
+			top: 22px;
 			left: 75px;
 
 		}
@@ -117,22 +117,41 @@
 
 	}
 
+	.title-img{
+
+		@include span-columns(12);
+			 margin-bottom: 1%;
+
+
+	}
+
 
 	& footer {	
 
+	@include span-columns(12);
 	 position: relative;
 	 bottom: 0;
 	 left: 0;
 	 margin-bottom: 1%;
+	 padding: 2%;
 
 	 width: 100%;
-	 height: 90px;
+	 height: 120px;
 
 	 -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
  	-moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
  	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 
  	border-top: 6px solid $bad-green;
+
+
+ 	 h3 {
+
+			float: left;
+
+ 	 }
+
+
 
  	.social-networks {
 
@@ -241,6 +260,8 @@
 	
 	.article-section {
 
+		@include span-columns(12);
+
 		width: 100%;
 		height: auto;
 		padding: 2%;
@@ -250,13 +271,111 @@
 	 	-moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 	 	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 
- 
+ 	.article-content {
+		
+		@include span-columns(9 of 12);
+		padding-right: 4%;
+		padding-left: 4%;
+ 	}
+
+ 	.article-sidebar {
+		
+		@include span-columns(2 of 12);
+
+
+		.social-networks {
+
+			margin-bottom: 20%;
+
+			.facebook{
+			
+				color: #fff;
+				display: block;
+				margin-right: 7.5px;
+				margin-left: 7.5px;
+				width: 35px;
+				height: 35px;
+				padding-left: 9px;
+				padding-top: 4.5px;
+				border-radius: 50%;
+				margin-bottom: 5px;
+				background: $bad-grey;
+				
+
+				&:hover{
+						
+							background: #3b5998;
+
+						}
+			}
+
+	
+			.google, .twitter{
+
+				color: #fff;
+				display: block;
+				margin-right: 7.5px;
+				margin-left: 7.5px;
+				width: 35px;
+				height: 35px;
+				padding-left: 6px;
+				padding-top: 4.5px;
+				border-radius: 50%;
+				margin-bottom: 5px;
+				background: $bad-grey;
+			}
+
+			.google:hover {
+				
+				background: #d34836;
+
+			}
+
+			.twitter:hover {
+				
+				background: #4099FF;
+
+			}
+
+
+
+	}
+
+		.info-blog {
+
+			margin-bottom: 20%;
+
+			& a {
+
+				text-decoration: none;
+				color: $bad-black;
+				
+			}
+
+			& a:hover {
+
+				text-decoration: none;
+				color: $bad-orange;
+
+			}
+
+			&  p {
+
+				font-size: 14px;
+
+
+			}
+
+		}
+
+ 	}
 
 
 	}
 
 	.image-section {
 
+			@include span-columns(12);
 			width: 100%;
 			padding: 2%;
 			margin-bottom: 1%;
