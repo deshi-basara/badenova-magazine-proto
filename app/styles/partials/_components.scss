@@ -226,5 +226,27 @@ label {
             @include span-columns(12 of 12);
         }
     }
+}
+
+/**
+ * Close button
+ */
+.close-icon {
+    position: absolute;
+    right: 106px;
+    top: 48.5%;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    font-size: em(40);
+
+    background-color: $bad-white;
+    box-shadow: $frame-1;
+    z-index: 1000;
+
+    @include transition(all 0.7s ease-in-out);
+    &:hover {
+        background-color: $bad-orange;
+        color: $bad-white;
+    }
 
 }

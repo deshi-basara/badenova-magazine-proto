@@ -53,6 +53,9 @@
 <!-- Search-Box -->
 <div id="search-box" ng-class="{ 'open': ctrl.open.search }">
 
+	<!-- close icon -->
+	<i class="ion-chevron-left close-icon" ng-click="ctrl.toggleBox('search')"></i>
+
 	<!-- Search-Input -->
 	<div class="search-input">
 		<input type="text" ng-model="ctrl.searchString" ng-keyup="ctrl.startSearch()" ng-class="{ 'results': ctrl.searchString }"placeholder="Suchen ...">
@@ -88,6 +91,9 @@
 <!-- Map-Box -->
 <div id="map-box" ng-class="{ 'open': ctrl.open.map }">
 
+	<!-- close icon -->
+	<i class="ion-chevron-left close-icon" ng-click="ctrl.toggleBox('map')"></i>
+
 	<div class="map-box-content">
 
 		<!-- GoogleMaps -->
@@ -115,6 +121,7 @@
 
 		<!-- Nearby list -->
 		<div class="map-nearby" ng-animate-children>
+
 			<h4>badenova in deiner Nähe</h4>
 			<div class="map-nearby-items" ng-hide="ctrl.gpsLoading">
 				<div class="map-nearby-item" ng-repeat="article in ctrl.articles">
@@ -130,7 +137,6 @@
 				<h5>Standort wird ermittelt ...</h5>
 			</div>
 		</div>
-
 	</div>
 
 </div>
@@ -138,6 +144,9 @@
 
 <!-- Feedbar -->
 <div id="feed">
+
+	<!-- close icon --
+	<i class="ion-chevron-left close-icon" ng-click="ctrl.toggleBox('feed')"></i>-->
 
 	<!-- Add Feed -->
 	<div class="feed-add">
