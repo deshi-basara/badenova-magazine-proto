@@ -75,6 +75,10 @@
                         padding: 5px;
                         width: 30px;
 
+                        h5 {
+                            cursor: pointer;
+                        }
+
                         &.family, &.saveenergy, &.naturalgas {
                             background-color: $bad-orange;
 

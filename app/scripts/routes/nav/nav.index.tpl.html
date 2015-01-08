@@ -105,7 +105,7 @@
 						</div>
 
 						<h5 class="headline" ng-non-bindable>{{ content.title }}</h5>
-	                    <p class="overlay-teaser" ng-non-bindable>{{ content.teaserText }}</p>
+	                    <p class="overlay-teaser" ng-non-bindable>{{ content.teaserText | characters: 50 }}</p>
 	                </div>
             	</ui-gmap-windows>
 
@@ -115,7 +115,7 @@
 
 		<!-- Nearby list -->
 		<div class="map-nearby" ng-animate-children>
-			<h4>Badenova in deiner Nähe</h4>
+			<h4>badenova in deiner Nähe</h4>
 			<div class="map-nearby-items" ng-hide="ctrl.gpsLoading">
 				<div class="map-nearby-item" ng-repeat="article in ctrl.articles">
 					<div class="category-{{:: article.category }} map-nearby-category">
