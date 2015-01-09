@@ -7,9 +7,6 @@
     width: 100%;
     height: 100%;
     display: table;
-    padding-right: 200px;
-    padding-left: 80px;
-
     z-index: 2;
 
     @include transition(all 0.3s ease-in-out);
@@ -23,6 +20,7 @@
         height: 100%;
         width: 100%;
         text-align: center;
+        padding-right: 100px;
 
         .spinner {
             display: inline-block;
