@@ -1,7 +1,7 @@
 <article id="article-detail">
-  <header ng-class="header-{{ctrl.article.category}}">
+  <header class="header-{{ctrl.article.category}}">
   	<div class="category-icon">
-  	<img ng-src="images/feed/{{ctrl.article.categoryIcon}}">
+  	<img ng-src="images/feed/{{ctrl.article.category}}.png">
   	</div>
    <h1>{{ctrl.article.title}}</h1>
    <h5 class="author">Von {{ctrl.article.author}}</h5>
@@ -13,7 +13,8 @@
 
 <div  class="article-section">
 
-    <div ng-bind="ctrl.article.content" class="article-content" >
+    <div class="article-content">
+      <div class="article-content-wrapper" ng-bind-html="ctrl.article.content"></div>
 
     </div>
 
@@ -117,12 +118,12 @@
     <!-- Jssor Slider End -->
 </div>
 
-  <footer class="footer-{{ctrl.article.category}}">
+  <!--<footer class="footer-{{ctrl.article.category}}">
     <h3>Weiterempfehlen:</h3>
 	 <div class="social-networks">
 		<a class="facebook"><i class="fa fa-facebook fa-3x"></i></a >
 		<a  class="google"><i class="fa fa-google-plus fa-3x"></i></a >
 		<a  class="twitter"><i class="fa fa-twitter fa-3x"></i></a >
 	 </div>
-  </footer>
+  </footer>-->
  </article>

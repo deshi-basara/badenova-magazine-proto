@@ -434,6 +434,13 @@
 
 		padding-right: 4%;
 		padding-left: 4%;
+		text-align: center;
+
+		.article-content-wrapper {
+			text-align: left;
+			display: inline-block;
+			max-width: 74ch;
+		}
  	}
 
  	.article-sidebar {
