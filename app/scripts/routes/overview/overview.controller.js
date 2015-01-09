@@ -6,12 +6,12 @@
         .module('app')
         .controller('OverviewCtrl', OverviewCtrl);
 
-    OverviewCtrl.$inject = ['$scope', 'FeedService', 'ArticlesService', '$timeout', '$rootScope'];
+    OverviewCtrl.$inject = ['$scope', 'FeedService', 'ArticlesService', '$timeout', '$rootScope', '$state'];
 
     /**
      * Handles the landing view and all interactions
      */
-    function OverviewCtrl($scope, FeedService, ArticlesService, $timeout, $rootScope) {
+    function OverviewCtrl($scope, FeedService, ArticlesService, $timeout, $rootScope, $state) {
         var ctrl = this;
 
             function addTrue(model) {
@@ -41,6 +41,13 @@
             });
         }
 
+        /**
+         * Redirects to the clicked article.
+         * @param  {int} articleId [id of the clicked article]
+         */
+        function goToArticle(articleId) {
+            $state.go('nav.article-detail', {'articleId': articleId})
+        }
 
         /**
          * Funktions-Beschreibung
@@ -70,13 +77,6 @@
 
         }
 
-        $(".titelstory-button").click(function (){
-
-    $rootScope.article = ctrl.teaserArticle;
-
-
-   });
-
         //////////////////////
 
         angular.extend(ctrl, {
@@ -84,6 +84,7 @@
             feedFilter: ['culture', 'family', 'freetime', 'greenenergy', 'naturalgas', 'nature', 'news', 'saveenergy'],
             teaserArticle: ArticlesService.getTeaserArticle(),
 
+            goToArticle: goToArticle,
             loadMore: loadMore
         });
 
@@ -108,7 +109,6 @@
             if(index !== -1) {
                 // remove from the filter
                 ctrl.feedFilter.splice(index, 1);
-                console.log(ctrl.feedFilter);
             }
         });
 

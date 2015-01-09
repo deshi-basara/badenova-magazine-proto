@@ -1,7 +1,9 @@
 <div id="overview">
 
     <!-- Teaser article -->
-    <div class="overview-teaser category-{{ ctrl.teaserArticle.category }}" ng-class="{ 'show': ctrl.teaserArticle.show }">
+    <div class="overview-teaser category-{{ ctrl.teaserArticle.category }}"
+        ng-class="{ 'show': ctrl.teaserArticle.show }"
+        ng-click="ctrl.goToArticle(ctrl.teaserArticle.id)">
 
         <!-- Category Indicator -->
         <div class="overview-item-category">
@@ -29,7 +31,9 @@
     <!-- All articles -->
     <div class="overview-items">
 
-        <div ng-repeat="article in ctrl.articles | badFeedFilter: ctrl.feedFilter" class="overview-item category-{{ article.category }}" ng-class="{ 'show': article.show }">
+        <div ng-repeat="article in ctrl.articles | badFeedFilter: ctrl.feedFilter" class="overview-item category-{{ article.category }}" 
+            ng-class="{ 'show': article.show }"
+            ng-click="ctrl.goToArticle(article.id)">
 
             <!-- Category Indicator -->
             <div class="overview-item-category">
