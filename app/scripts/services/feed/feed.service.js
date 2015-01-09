@@ -49,7 +49,7 @@
                         var currentId = service.feedItems[i].id;
 
                         localStorageService.set(currentId, true);
-                    };
+                    }
 
                     // set feed-init to set
                     localStorageService.set('feed-init', true);
