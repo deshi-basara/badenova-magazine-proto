@@ -50,10 +50,10 @@ angular
     })*/
 
     .state('nav.article-detail', {
-      url: '/article-detail',
+      url: '/article-detail/:articleId',
       templateUrl: 'scripts/routes/article-detail/article.detail.index.tpl.html',
       controller: 'ArticleDetailCtrl',
-
+      controllerAs: 'ctrl'
     })
 
     .state('nav.overview', {

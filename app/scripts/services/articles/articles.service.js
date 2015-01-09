@@ -17,6 +17,7 @@
             allArticles: [
                 {
                     "id": 1,
+                    "author": "Max Mustermann",
                     "image": "image2.jpg",
                     "title": "My Smart Home is my Castle",
                     "category": "saveenergy",
@@ -26,6 +27,7 @@
                 },
                 {
                     "id": 2,
+                    "author": "Max Mustermann",
                     "title": "tado°: Heizungssteuerung per App.",
                     "image": "image7.jpg",
                     "category": "saveenergy",
@@ -35,6 +37,7 @@
                 },
                 {
                     "id": 3,
+                    "author": "Max Mustermann",
                     "title": "Umweltschutz im Büro",
                     "image": "image1.jpg",
                     "category": "saveenergy",
@@ -44,6 +47,7 @@
                 },
                 {
                     "id": 4,
+                    "author": "Max Mustermann",
                     "title": "Ökostrom dank Solartechnik",
                     "image": "image8.jpg",
                     "category": "greenenergy",
@@ -53,6 +57,7 @@
                 },
                 {
                     "id": 5,
+                    "author": "Max Mustermann",
                     "title": "Die badenova Ökobilanz",
                     "image": "windmill.jpg",
                     "category": "news",
@@ -62,6 +67,7 @@
                 },
                 {
                     "id": 6,
+                    "author": "Max Mustermann",
                     "title": "Energiezukunft durch High-Tech",
                     "image": "4080682044_0596eb4475_o.jpg",
                     "category": "news",
@@ -70,6 +76,7 @@
                     "content": "Das überarbeitete EEG fördert Investitionen nun noch zielgerichteter.\n Die TWS stellt sich den neuen Problemen und entwickelt hocheffiziente Lösungen. Sie brummen seit August: die Generatoren des neuen Blockheizkraftwerkes (BHKW) in der Ravensburger Eissporthalle. Dabei wandeln sie nach dem Prinzip der Kraft-Wärme-Kopplung Gas in Wärme und Strom um und das mit einem bemerkenswerten Wirkungsgrad. Der selbst erzeugte Strom hält die Anlagen der Eissporthalle und der angeschlossenen Gastronomie am Laufen. Die Wärme aus dem hauseigenen Kraftwerk nutzt die Eissporthalle zum Teil selbst, zudem wird mit Hilfe einer speziellen Versorgungsleitung ein benachbarter Gebäude-Komplex beheizt. „Dieses lokale Projekt zeigt, wie durch gebündelte Kräfte ein zukunftsweisendes Energiekonzept entstehen kann“, lobte Oberbürgermeister Daniel Rapp bei der Einweihung. Entwickelt haben dieses Konzept die Ingenieure der TWS; Auftraggeber sind die Stadtwerke Ravensburg, die Anfang des Jahres die Betriebsführung der beliebten Freizeitstätte übernommen haben. Innovativer Energiespeicher Mit in das Nahwärmenetz integriert ist ein Pufferspeicher für nicht sofort abgerufene Energie. „Es war uns wichtig, eine solche Technologie in das Projekt einzubinden“, erklärt TWS-Geschäftsführer Dr. Andreas Thiel-Böhm. Nachdenklich stimmt ihn aber, dass innovative Speicher für Strom und Wärme durch das über"             },
                 {
                     "id": 7,
+                    "author": "Max Mustermann",
                     "title": "Die Region erleben",
                     "image": "image7.jpg",
                     "category": "freetime",
@@ -79,6 +86,7 @@
                 },
                 {
                     "id": 8,
+                    "author": "Max Mustermann",
                     "title": "Klimaschutz aus der Küche",
                     "image": "image8.jpg",
                     "category": "family",
@@ -87,6 +95,7 @@
                     "content": "Unser Essen ist für etwa 12 Prozent unserer durchschnittlichen CO2-Bilanz verantwortlich. Die Tomate aus dem Garten verursacht wenig, das Rindersteak aus Übersee aber viel CO2. Doch Vorsicht: Vegetarier sind nicht automatisch die besseren Klimaschützer.\n „Wie hältst Du’s mit dem Fleischkonsum?“ – haben wir Familie Klimaschutz vor einigen Wochen befragt, um ihre ernährungsbedingten CO2-Emissionen zu bilanzieren. Nicht die einzige, aber eine entscheidende Frage: Denn Tiere monatelang aufzuziehen und sie mit eigens angebauten Pflanzen zu füttern, sie zu schlachten und weiterzuverarbeiten, um dann das gekühlte Fleisch zum Endverbraucher zu transportieren, verschlingt Unmengen an Energie. Und hat einen wesentlichen Anteil an den 1,35 Tonnen Kohlendioxid, die pro Person und pro Jahr durch die Ernährung verursacht werden. Ein Kilo Fleisch kann so schädlich sein wie 250 Kilometer Autofahrt oder – je nach Berechnung – 36 Kilo CO2(1). \n „Aber Fleisch wurde doch schon immer gegessen“, mäkeln die Skeptiker des Klimawandels. Das stimmt natürlich, jedoch waren es vor 150 Jahren in Deutschland 10 kg pro Person und Jahr – heute sind es 62 kg (2). Hochgerechnet auf ein Menschenleben sind dies 1094 Tiere (3): Vier Kühe, vier Schafe, zwölf Gänse, 37 Enten, 46 Truthähne, 46 Schweine, 945 Hühner. Fleischverzicht im Selbstversuch: Müssen wir also alle Vegetarier werden? Familie Klimaschutz hat das im Selbstversuch ausprobiert und ihre Erfahrungen auf ENTEGAs facebook-Seite geteilt. Um es vorwegzunehmen: Ernährungsgewohnheiten sind genau das – Gewohnheiten. Und die ändert man nicht so leicht. Wer gerne Fleisch isst, wird nicht von heute auf morgen zum begeisterten Vegetarier. Und das Zubereiten leckerer und abwechslungsreicher Gerichte mussten auch die meisten Vegetarier erst lernen. Fazit des Experiments: ein komplett fleischfreier Lebenswandel scheidet für Blöchingers aus, in diesem Punkt kollidieren Klimaschutz und Lebensqualität. Etwas weniger ist mehr … viel mehr"                },
                 {
                     "id": 9,
+                    "author": "Max Mustermann",
                     "title": "Klimaneutrales Erdgas",
                     "image": "image6.jpg",
                     "category": "naturalgas",
@@ -95,6 +104,7 @@
                     "content": "Auch für Erdgas gibt es eine klimafreundliche Alternative. Das Zauberwort lautet: CO2-Kompensation.\n Heizen mit Verantwortung: Für Klimaneutrales Erdgas wird CO2durch Aufforstung und Waldschutz kompensiert. Das wichtigste Ziel von ENTEGA ist eine CO2-neutrale Energieversorgung für alle. Doch Kohlendioxid lässt sich nicht bei allen Energiequellen komplett vermeiden. Für das Beheizen von Wohnungen ist Erdgas beispielsweise momentan noch unverzichtbar, allerdings wird beim Verbrennen, bei der Förderung und beim Transport unweigerlich CO2 freigesetzt. Doch auch hier geht ENTEGA mit gutem Beispiel voran: CO2, das sich noch nicht komplett vermeiden lässt, gleichen wir an anderer Stelle wieder aus. Für den klimaneutralen Erdgas-Tarif von ENTEGA werden die entstehenden Emissionen durch langfristig angelegte Waldschutz- und Aufforstungsprojekte kompensiert. Der Effekt für das Klima: Es wird durch kein zusätzliches Gramm CO2 belastet. Die Umwandlung von Kohlendioxid. Das Prinzip ist denkbar einfach: Bäume können Kohlendioxid aus der Atmosphäre binden. Sie nehmen CO2 aus der Luft und Wasser (H2O) aus dem Boden auf. Daraus bilden sie dann durch Photosynthese Sauerstoff (O2), der an die Luft abgegeben wird, und Kohlenstoff (C), der in der Biomasse fixiert wird. Diesen Effekt macht sich ENTEGA zunutze. Denn sowohl durch das Pflanzen neuer Bäume als auch durch den Schutz und Erhalt existierender Waldflächen wird der Atmosphäre Kohlendioxid entzogen. Weltweite Waldschutz-Projekte Das ENTEGA Schwesterunternehmen Forest Carbon Group AG finanziert, entwickelt und steuert weltweit solche Waldschutz- und Aufforstungsprojekte. Ein gutes Beispiel ist das Aufforstungsprojekt CERP (Community Environmental Restoration Program) im Südwesten der kanadischen Provinz British Columbia. Dort wurden geschädigte Auwälder renaturiert, die vor Jahrzehnten aus wirtschaftlichem Interesse abgeholzt wurden. Solche gerodeten Flächen werden daraufhin auf absehbare Zeit von hartnäckigem Gestrüpp und Buschwerk dominiert – und können somit wesentlich weniger CO2 in der Biomasse binden als die Wälder zuvor."                },
                 {
                     "id": 10,
+                    "author": "Max Mustermann",
                     "title": "Urlaub mit Klimawert",
                     "image": "image3.jpg",
                     "category": "culture",
@@ -104,6 +114,7 @@
                 },
                 {
                     "id": 11,
+                    "author": "Max Mustermann",
                     "title": "Schneewalzer am Trauf",
                     "image": "image4.jpg",
                     "category": "nature",
@@ -113,6 +124,7 @@
                 },
                 {
                     "id": 12,
+                    "author": "Max Mustermann",
                     "title": "Skigebiet für Langläufer und Familien",
                     "image": "image9.jpg",
                     "category": "family",
@@ -123,6 +135,7 @@
             ],
             teaserArticle: {
                 "id": 12,
+                "author": "Max Mustermann",
                 "title": "Skigebiet für Langläufer und Familien",
                 "image": "image9.jpg",
                 "category": "family",
@@ -132,6 +145,7 @@
                 "content": "Im Nordosten auf der Schwäbischen Alb liegt der Albuch, ein idealer Ort für Wintersportler. 100 Kilometer Loipen, elf Langlaufrouten, Skatingstrecken und 20 Kilometer Winterwanderwege lassen kaum Wünsche offen. Nur rund 15 Minuten mit dem Auto von Schwäbisch Gmünd entfernt, bietet die Region um Heubach, Bartholomä, Essingen, Königsbronn und Steinheim mit ihren Hochflächen, Wäldern und Steillagen nicht nur eine schöne Landschaft, vielmehr kommen auch die Wintersportler auf ihre Kosten. Für Langläufer ist mit elf unterschiedlichen Loipen verschiedener Schwierigkeitsgrade Einiges geboten – sowohl für Freunde des klassischen Langlaufs als auch für Skater. Um 18 Uhr schließen die Loipen – die leichte, 1,2 Kilometer lange Abendloipe am Skigelände Wirtsberg in Bartholomä ist auch danach noch geöffnet. Ein Übungslift und zwei Schlepplifte, leichte bis mittelschwere Abfahrten, Flutlicht sowie Ski- und Snowboardschulen machen das Wintersportzentrum Hirtenteich besonders beliebt bei Familien. Es ist zugleich das größte Wintersportzentrum der Region mit der längsten Abfahrtsmöglichkeit. Außerdem gibt es den Skilift am Wirtsberg, wo ab Dezember Skikurse für alle Altersklassen angeboten werden. Optimale Bedingungen für eine neuere Wintersportart, das Snow-Kiting, hat der Albuch ebenfalls. Auf der Kiting-Area bei der Lauterburg, nahe des Wintersportzentrums Hirtenteich, fliegen die Sportler dabei an einem Zugdrachen auf Ski oder Snowboard kilometerweit durch unberührten Pulverschnee. Außerdem steht in Lauterburg an der Bergrettungswache ein Eiskletterturm. Für Schneeschuhwanderer gibt es im Albuch spezielle Routen. Die Winterwanderwege befinden sich rund um Bartholomä, Rötenbach, Gnannenweiler und das Naturschutzgebiet Wental mit seinem Felsenmeer."
             },
 
+            getArticleById: getArticleById,
             getAllArticles: getAllArticles,
             getTeaserArticle: getTeaserArticle
         };
@@ -140,7 +154,20 @@
 
         ///////////////
 
-
+        /**
+         * Return an article specified by id.
+         * @param  {id}     articleId [id of the article]
+         * @return {object}           [article object]
+         */
+        function getArticleById(articleId) {
+            // sequential search for the article id
+            for (var i = 0; i < service.allArticles.length; i++) {
+                // is article?
+                if(articleId == service.allArticles[i].id) {
+                    return service.allArticles[i];
+                }
+            };
+        }
 
         /**
          * Returns all articles.

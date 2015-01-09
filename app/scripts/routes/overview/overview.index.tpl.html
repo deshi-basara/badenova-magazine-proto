@@ -18,7 +18,9 @@
                 <p>{{ ctrl.teaserArticle.content | characters: 280 }}</p>
             </div>
             <div class="overview-item-button">
-                <button ui-sref="nav.article-detail" class="button titelstory-button">Titelstory lesen</button>
+                <a ng-href="#/article-detail/{{:: ctrl.teaserArticle.id }}">
+                    <button class="button titelstory-button">Titelstory lesen</button>
+                </a>
             </div>
         </div>
 
@@ -44,7 +46,9 @@
                     <p>{{ article.content | characters: 120 }}</p>
                 </div>
                 <div class="overview-item-button">
-                    <button class="button">Lesen</button>
+                    <a ng-href="#/article-detail/{{:: article.id }}">
+                        <button class="button">Lesen</button>
+                    </a>
                 </div>
             </div>
         </div>

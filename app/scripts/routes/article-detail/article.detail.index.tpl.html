@@ -1,19 +1,19 @@
 <article id="article-detail">
-  <header class="header-{{article.category}}">
+  <header ng-class="header-{{ctrl.article.category}}">
   	<div class="category-icon">
-  	<img src="../../../images/feed/{{article.categoryIcon}}">
+  	<img ng-src="images/feed/{{ctrl.article.categoryIcon}}">
   	</div>
-   <h1>{{article.title}}</h1>
-   <h5 class="author">Von {{article.author}}</h5>
-   <span class="date">{{article.date}}</span>
+   <h1>{{ctrl.article.title}}</h1>
+   <h5 class="author">Von {{ctrl.article.author}}</h5>
+   <span class="date">{{ctrl.article.date}}</span>
   </header>
   <div class="title-img">
-	<img src="../../../images/articles/{{article.image}}">
+	<img ng-src="images/articles/{{ctrl.article.image}}">
 </div>
 
 <div  class="article-section">
 
-    <div ng-bind="article.content" class="article-content" >
+    <div ng-bind="ctrl.article.content" class="article-content" >
 
     </div>
 
@@ -28,18 +28,18 @@
           </div>
 
           <div class="info-blog">
-                      <h4>Meine Energie</h4>
-                      <p>Praktische Energiespartipps, Aktuelles zu Klimaschutz und Nachhaltigkeit und die neuesten Infos zu Badenova.</p>
+                      <h4>meine energie</h4>
+                      <p>Praktische Energiespartipps, Aktuelles zu Klimaschutz und Nachhaltigkeit und die neuesten Infos zu badenova.</p>
                       <a ui-sref="nav.overview"><i class="fa fa-arrow-right"></i></span> Übersichtsseite</a>
           </div>
 
           <div class="info author">
                         <h5>Autor</h5>
                         <div class="author-pic">
-                          <img src="https://media.licdn.com/mpr/mpr/shrink_200_200/p/4/005/06b/261/0c9068d.jpg" alt="{{article.author}}" class="photo" width="100%" height="100%">   
+                          <img src="https://media.licdn.com/mpr/mpr/shrink_200_200/p/4/005/06b/261/0c9068d.jpg" alt="{{ctrl.article.author}}" class="photo" width="100%" height="100%">   
                         </div>
                         <div class="author-text">
-                       {{article.author}} ist schon seit Jahren bei Badova als erfolgreicher Redakteur tätig.
+                       {{ctrl.article.author}} ist schon seit Jahren bei badenova als erfolgreicher Redakteur tätig.
                         </div> 
                         
           </div>
@@ -61,32 +61,32 @@
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 356px; overflow: hidden; background: transparent">
             <div>
-                <img u="image" src="../../../images/articles/{{article.image}}">
-                <img u="thumb" src="../../../images/articles/{{article.image}}" />
+                <img u="image" ng-src="images/articles/{{ctrl.article.image}}">
+                <img u="thumb" ng-src="images/articles/{{ctrl.article.image}}" />
             </div>
             <div>
-                 <img u="image" src="../../../images/articles/{{article.image}}">
-                <img u="thumb" src="../../../images/articles/{{article.image}}" />
+                 <img u="image" ng-src="images/articles/{{ctrl.article.image}}">
+                <img u="thumb" ng-src="images/articles/{{ctrl.article.image}}" />
             </div>
             <div>
-                 <img u="image" src="../../../images/articles/{{article.image}}">
-                <img u="thumb" src="../../../images/articles/{{article.image}}" />
+                 <img u="image" ng-src="images/articles/{{ctrl.article.image}}">
+                <img u="thumb" ng-src="images/articles/{{ctrl.article.image}}" />
             </div>
             <div>
-                 <img u="image" src="../../../images/articles/{{article.image}}">
-                <img u="thumb" src="../../../images/articles/{{article.image}}" />
+                 <img u="image" ng-src="images/articles/{{ctrl.article.image}}">
+                <img u="thumb" ng-src="images/articles/{{ctrl.article.image}}" />
             </div>
             <div>
-                <img u="image" src="../../../images/articles/{{article.image}}">
-                <img u="thumb" src="../../../images/articles/{{article.image}}" />
+                <img u="image" ng-src="images/articles/{{ctrl.article.image}}">
+                <img u="thumb" ng-src="images/articles/{{ctrl.article.image}}" />
             </div>
             <div>
-                 <img u="image" src="../../../images/articles/{{article.image}}">
-                <img u="thumb" src="../../../images/articles/{{article.image}}" />
+                 <img u="image" ng-src="images/articles/{{ctrl.article.image}}">
+                <img u="thumb" ng-src="images/articles/{{ctrl.article.image}}" />
             </div>
             <div>
-                 <img u="image" src="../../../images/articles/{{article.image}}">
-                <img u="thumb" src="../../../images/articles/{{article.image}}" />
+                 <img u="image" ng-src="images/articles/{{ctrl.article.image}}">
+                <img u="thumb" ng-src="images/articles/{{ctrl.article.image}}" />
             </div>
 
         </div>
@@ -117,7 +117,7 @@
     <!-- Jssor Slider End -->
 </div>
 
-  <footer class="footer-{{article.category}}">
+  <footer class="footer-{{ctrl.article.category}}">
     <h3>Weiterempfehlen:</h3>
 	 <div class="social-networks">
 		<a class="facebook"><i class="fa fa-facebook fa-3x"></i></a >
