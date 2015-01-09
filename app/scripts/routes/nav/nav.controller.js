@@ -221,8 +221,6 @@
              * Hide the loader, when dom is ready
              */
             $timeout(function() {
-                ctrl.preloaderHide = true;
-
                 /**
                  * Watches the scroll position of the container (debounced).
                  */
@@ -236,7 +234,18 @@
 
         //////////////////////
 
-        //openFeedModal();
+
+        /**
+        * Listen for fake loader events.
+        */
+        $rootScope.$on('$locationChangeStart', function() {
+            ctrl.isLoading = true;
+        });
+        $rootScope.$on('$locationChangeSuccess', function() {
+            $timeout(function() {
+                ctrl.isLoading = false;
+            }, 1600);
+        });
 
     }
 

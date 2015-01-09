@@ -39,17 +39,14 @@
 </nav>
 
 <!-- Loader -->
-<!--<div class="bad-loader" ng-hide="ctrl.preloaderHide">
+<div class="bad-loader" ng-show="ctrl.isLoading">
 	<div class="bad-loader-content">
-		<img src="images/loader/bad-loader.gif">
+		<div class="spinner"></div>
 	</div>
 </div>
 
 <!-- Nested view content -->
-<section ui-view class="nested-container">
-
-
-</section>
+<section ui-view class="nested-container"></section>
 
 
 <!-- Search-Box -->
