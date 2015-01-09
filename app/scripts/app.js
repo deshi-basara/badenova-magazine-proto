@@ -10,6 +10,7 @@
 // the 2nd parameter is an array of 'requires'.
 angular
   .module('app', [
+  'ngSanitize',
   'ui.router',
   'ngAnimate',
   'LocalStorageModule',
