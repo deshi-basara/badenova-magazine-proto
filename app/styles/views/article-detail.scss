@@ -24,6 +24,11 @@
  	-moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
  	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 
+ 	@include media($mobile) {
+			height: 100px;
+ 
+		}
+
 		.category-icon {
 
 				position: absolute;
@@ -60,6 +65,12 @@
 			top: 22px;
 			left: 75px;
 
+			@include media($mobile) {
+			position: absolute;
+			top: 44px;
+			left: 75px;
+			}
+
 		}
 
 		.date{
@@ -67,6 +78,12 @@
 			position: absolute;
 			top: 8px;
 			right: 10px;
+
+			@include media($mobile) {
+			position: absolute;
+			top: 52px;
+			right: 10px;
+			}
 					
 		}
 
@@ -147,9 +164,15 @@
 
  	 h3 {
 
-			float: left;
+		float: left;
+
+ 	 	@include media($mobile) {
+
+			float: none;
 
  	 }
+
+ 	}
 
 
 
@@ -158,7 +181,7 @@
 		width: 270px;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: 10px;
+		margin-top: 20px;
 
 		.facebook{
 		
@@ -172,6 +195,7 @@
 			padding-top: 9px;
 			border-radius: 50%;
 			background: $bad-grey;
+			;
 			
 
 			&:hover{
@@ -210,6 +234,124 @@
 
  	}
 
+ 
+	@include media($tablet) {
+
+		.social-networks {
+
+			margin-bottom: 20%;
+
+			.facebook{
+			
+				color: #fff;
+				float: left;
+				margin-right: 15px;
+				margin-left: 15px;
+				width: 60px;
+				height: 60px;
+				padding-left: 18px;
+				padding-top: 9px;
+				border-radius: 50%;
+				background: #3b5998;
+
+			}
+
+			
+	
+			.google, .twitter{
+
+				color: #fff;
+				float: left;
+				margin-right: 15px;
+				margin-left: 15px;
+				width: 60px;
+				height: 60px;
+				padding-left: 12px;
+				padding-top: 9px;
+				border-radius: 50%;
+			}
+
+			.google {
+				
+				background: #d34836;
+
+			}
+
+			.twitter {
+				
+				background: #4099FF;
+
+			}
+		
+		}	
+	
+	}
+
+	@include media($mobile) {
+
+		.social-networks {
+
+			margin-bottom: 20%;
+			width: 150px;
+
+			.facebook{
+			
+				color: #fff;
+				display: block;
+				margin-right: 7.5px;
+				margin-left: 7.5px;
+				width: 35px;
+				height: 35px;
+				padding-left: 9px;
+				padding-top: 4.5px;
+				border-radius: 50%;
+				margin-bottom: 5px;	
+				background: #3b5998;
+
+				& i {
+					font-size: 2em;
+				}
+
+			}
+
+			
+	
+			.google, .twitter{
+
+				color: #fff;
+				display: block;
+				margin-right: 7.5px;
+				margin-left: 7.5px;
+				width: 35px;
+				height: 35px;
+				padding-left: 6px;
+				padding-top: 4.5px;
+				border-radius: 50%;
+				margin-bottom: 5px;
+
+				& i {
+
+					font-size: 2em;
+				}
+			
+			}
+
+			.google {
+				
+				background: #d34836;
+
+			}
+
+			.twitter {
+				
+				background: #4099FF;
+
+			}
+		
+		}	
+	
+	}
+
 }
 
  	.footer-nature, .footer-freetime{
@@ -244,7 +386,11 @@
 	 	-moz-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 	 	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
 
- 
+		
+ 	@include media($mobile){
+	height: 40%;
+
+ 	}
 
 		& > img {
 
@@ -253,6 +399,12 @@
 
 	  	display: block;
 	    position: relative; 
+
+	    @include media($mobile){
+	   width:  120%;
+	   margin-top: -19%;
+	
+ 	}
 
 	    }		
 
@@ -274,6 +426,12 @@
  	.article-content {
 		
 		@include span-columns(9 of 12);
+
+		@include media($mobile) {
+		@include span-columns(12 of 12);
+ 
+		}
+
 		padding-right: 4%;
 		padding-left: 4%;
  	}
@@ -281,6 +439,15 @@
  	.article-sidebar {
 		
 		@include span-columns(2 of 12);
+
+		@include media($tablet) {
+ 
+		}
+
+		@include media($mobile) {
+			display: none;
+ 
+		}
 
 
 		.social-networks {
@@ -300,6 +467,10 @@
 				border-radius: 50%;
 				margin-bottom: 5px;
 				background: $bad-grey;
+
+				@include media($tablet) {
+				background: #3b5998;
+				}
 				
 
 				&:hover{
@@ -323,7 +494,25 @@
 				border-radius: 50%;
 				margin-bottom: 5px;
 				background: $bad-grey;
+
 			}
+
+				.google {
+
+				@include media($tablet) {
+					background: #d34836;
+				}
+
+			}
+
+			.twitter {
+				
+				@include media($tablet) {
+					background: #4099FF;
+				}
+
+			}
+
 
 			.google:hover {
 				
@@ -339,7 +528,7 @@
 
 
 
-	}
+		}
 
 		.info-blog {
 
