@@ -43,13 +43,6 @@ angular
       controllerAs: 'ctrl'
     })
 
-    /*.state('nav.landing', {
-      url: '/',
-      templateUrl: 'scripts/routes/landing/landing.index.tpl.html',
-      controller: 'LandingCtrl',
-      controllerAs: 'ctrl'
-    })*/
-
     .state('nav.article-detail', {
       url: '/article-detail/:articleId',
       templateUrl: 'scripts/routes/article-detail/article.detail.index.tpl.html',
